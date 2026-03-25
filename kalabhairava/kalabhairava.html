@@ -1,0 +1,1824 @@
+<!DOCTYPE html>
+<html lang="kn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ಶ್ರೀ ಕಾಲಭೈರವ | Sri Kalabhairava</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Noto+Sans+Kannada:wght@300;400;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=MedievalSharp&display=swap" rel="stylesheet">
+<style>
+:root {
+  --saffron: #FF6B00;
+  --deep-saffron: #E55A00;
+  --gold: #C8860A;
+  --gold-light: #F0B429;
+  --gold-pale: #F5D68A;
+  --paper: #2A1A08;
+  --paper-mid: #3D2510;
+  --paper-light: #5A3A1A;
+  --paper-pale: #7A5030;
+  --burnt: #1A0E05;
+  --ash: #8B7355;
+  --ash-light: #C4A882;
+  --cream: #F2DFB0;
+  --cream-dim: #D4B87A;
+  --text-main: #F2DFB0;
+  --text-dim: #C4A882;
+  --text-gold: #F0B429;
+  --red-accent: #CC2200;
+  --deep-red: #8B0000;
+  --smoke: rgba(42, 26, 8, 0.85);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--burnt);
+  color: var(--text-main);
+  font-family: 'Noto Sans Kannada', 'Crimson Text', serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* AGED PAPER TEXTURE */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: 
+    radial-gradient(ellipse at 20% 20%, rgba(200,134,10,0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at 80% 80%, rgba(139,0,0,0.06) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 50%, rgba(255,107,0,0.04) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* NOISE TEXTURE OVERLAY */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.3;
+}
+
+/* ===================== HEADER ===================== */
+.site-header {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  padding: 0;
+  background: linear-gradient(180deg, #0D0603 0%, var(--burnt) 100%);
+  border-bottom: 2px solid var(--gold);
+  box-shadow: 0 4px 30px rgba(200,134,10,0.3);
+}
+
+.header-inner {
+  position: relative;
+  padding: 30px 20px 20px;
+}
+
+.header-flame-border {
+  height: 6px;
+  background: linear-gradient(90deg, transparent, var(--deep-red), var(--saffron), var(--gold-light), var(--saffron), var(--deep-red), transparent);
+  animation: flamePulse 2s ease-in-out infinite;
+}
+
+@keyframes flamePulse {
+  0%, 100% { opacity: 0.7; }
+  50% { opacity: 1; }
+}
+
+.om-symbol {
+  font-size: 3rem;
+  color: var(--gold-light);
+  text-shadow: 0 0 20px rgba(240,180,41,0.8);
+  display: block;
+  margin-bottom: 8px;
+  animation: glowPulse 3s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+  0%, 100% { text-shadow: 0 0 20px rgba(240,180,41,0.6); }
+  50% { text-shadow: 0 0 40px rgba(255,107,0,1), 0 0 60px rgba(240,180,41,0.6); }
+}
+
+.site-title-kn {
+  font-family: 'Noto Sans Kannada', serif;
+  font-size: clamp(1.8rem, 5vw, 3.2rem);
+  font-weight: 700;
+  color: var(--gold-light);
+  line-height: 1.2;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.8), 0 0 30px rgba(200,134,10,0.5);
+}
+
+.site-title-en {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: clamp(0.8rem, 2vw, 1.2rem);
+  color: var(--ash-light);
+  letter-spacing: 4px;
+  margin-top: 4px;
+}
+
+.decorative-line {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 12px 0;
+}
+
+.decorative-line::before, .decorative-line::after {
+  content: '';
+  flex: 1;
+  max-width: 200px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.decorative-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--gold-light);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--gold-light);
+}
+
+/* ===================== LANG TOGGLE ===================== */
+.lang-toggle {
+  position: fixed;
+  top: 15px;
+  right: 20px;
+  z-index: 1000;
+  display: flex;
+  gap: 4px;
+  background: rgba(26,14,5,0.9);
+  border: 1px solid var(--gold);
+  border-radius: 8px;
+  padding: 4px;
+  backdrop-filter: blur(10px);
+}
+
+.lang-btn {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all 0.3s;
+  background: transparent;
+  color: var(--ash-light);
+  font-family: 'Noto Sans Kannada', sans-serif;
+}
+
+.lang-btn.active {
+  background: linear-gradient(135deg, var(--saffron), var(--gold));
+  color: var(--burnt);
+}
+
+/* ===================== NAV ===================== */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(13,6,3,0.95);
+  border-bottom: 1px solid rgba(200,134,10,0.3);
+  backdrop-filter: blur(20px);
+  padding: 0 10px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+nav::-webkit-scrollbar { display: none; }
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  min-width: max-content;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.nav-btn {
+  padding: 14px 18px;
+  background: none;
+  border: none;
+  color: var(--ash-light);
+  cursor: pointer;
+  font-family: 'Noto Sans Kannada', serif;
+  font-size: 0.82rem;
+  white-space: nowrap;
+  position: relative;
+  transition: color 0.3s;
+  letter-spacing: 0.5px;
+}
+
+.nav-btn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--saffron), var(--gold-light));
+  transition: width 0.3s;
+}
+
+.nav-btn:hover, .nav-btn.active {
+  color: var(--gold-light);
+}
+
+.nav-btn:hover::after, .nav-btn.active::after {
+  width: 80%;
+}
+
+/* ===================== MAIN CONTENT ===================== */
+main {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 15px;
+}
+
+/* ===================== SECTIONS ===================== */
+.section {
+  display: none;
+  animation: fadeInUp 0.5s ease;
+}
+
+.section.active {
+  display: block;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===================== SECTION HEADER ===================== */
+.section-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.section-title {
+  font-family: 'Noto Sans Kannada', serif;
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: var(--gold-light);
+  text-shadow: 0 0 20px rgba(200,134,10,0.4);
+  line-height: 1.3;
+}
+
+.section-subtitle {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 0.8rem;
+  color: var(--ash);
+  letter-spacing: 3px;
+  margin-top: 6px;
+  text-transform: uppercase;
+}
+
+/* ===================== HERO SECTION ===================== */
+.hero-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 768px) {
+  .hero-layout { grid-template-columns: 1fr; }
+}
+
+.hero-image-card {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid var(--gold);
+  box-shadow: 0 0 30px rgba(200,134,10,0.2), inset 0 0 30px rgba(0,0,0,0.5);
+}
+
+.hero-image-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 50%, rgba(13,6,3,0.8) 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-image-card img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-image-label {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  font-family: 'Noto Sans Kannada', serif;
+  font-size: 1rem;
+  color: var(--gold-light);
+  text-shadow: 0 2px 8px rgba(0,0,0,1);
+  white-space: nowrap;
+  text-align: center;
+}
+
+/* ===================== ASTAKAM ===================== */
+.astakam-layout {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .astakam-layout { grid-template-columns: 1fr; }
+}
+
+.astakam-image-wrap {
+  position: sticky;
+  top: 80px;
+}
+
+.devotional-image {
+  width: 100%;
+  border-radius: 4px;
+  border: 2px solid var(--gold);
+  box-shadow: 0 0 40px rgba(200,134,10,0.3), 0 20px 60px rgba(0,0,0,0.5);
+}
+
+.image-caption {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 0.85rem;
+  color: var(--ash-light);
+  font-style: italic;
+}
+
+/* ===================== TEXT CONTENT ===================== */
+.text-scroll-pane {
+  background: linear-gradient(135deg, rgba(42,26,8,0.9), rgba(26,14,5,0.95));
+  border: 1px solid rgba(200,134,10,0.3);
+  border-radius: 4px;
+  padding: 30px;
+  max-height: 70vh;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--gold) var(--burnt);
+  position: relative;
+}
+
+.text-scroll-pane::before {
+  content: '';
+  position: absolute;
+  inset: 3px;
+  border: 1px solid rgba(200,134,10,0.15);
+  border-radius: 3px;
+  pointer-events: none;
+}
+
+.text-scroll-pane::-webkit-scrollbar { width: 6px; }
+.text-scroll-pane::-webkit-scrollbar-track { background: var(--burnt); }
+.text-scroll-pane::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
+
+.stanza {
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(200,134,10,0.15);
+}
+
+.stanza:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.stanza-text {
+  font-family: 'Noto Sans Kannada', serif;
+  font-size: 1rem;
+  line-height: 2;
+  color: var(--text-main);
+}
+
+.stanza-number {
+  display: inline-block;
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 0.7rem;
+  color: var(--gold);
+  margin-left: 6px;
+  vertical-align: middle;
+}
+
+.invocation-text {
+  font-family: 'Noto Sans Kannada', serif;
+  font-size: 0.95rem;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+/* ===================== KAVACHAM ===================== */
+.kavacham-layout {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 30px;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .kavacham-layout { grid-template-columns: 1fr; }
+}
+
+/* ===================== ASHTOTTARA ===================== */
+.names-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 8px;
+  margin-top: 20px;
+}
+
+.name-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 14px;
+  background: rgba(42,26,8,0.6);
+  border: 1px solid rgba(200,134,10,0.2);
+  border-radius: 3px;
+  transition: all 0.2s;
+}
+
+.name-item:hover {
+  background: rgba(200,134,10,0.1);
+  border-color: var(--gold);
+}
+
+.name-number {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 0.65rem;
+  color: var(--gold);
+  min-width: 28px;
+  opacity: 0.7;
+}
+
+.name-text {
+  font-family: 'Noto Sans Kannada', serif;
+  font-size: 0.92rem;
+  color: var(--text-main);
+}
+
+/* ===================== BHAIRAVA TREE ===================== */
+.tree-container {
+  width: 100%;
+  overflow-x: auto;
+  padding: 20px 0;
+}
+
+.tree-svg-wrap {
+  min-width: 900px;
+  background: linear-gradient(135deg, rgba(13,6,3,0.95), rgba(26,14,5,0.95));
+  border: 1px solid rgba(200,134,10,0.3);
+  border-radius: 8px;
+  padding: 30px;
+}
+
+/* Central node */
+.tree-center {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.center-node {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--deep-red), #550000);
+  border: 2px solid var(--gold-light);
+  border-radius: 50%;
+  width: 130px;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0 auto;
+  box-shadow: 0 0 30px rgba(200,134,10,0.5), 0 0 60px rgba(139,0,0,0.3);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.center-node:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 50px rgba(200,134,10,0.8);
+}
+
+.center-node-text {
+  font-family: 'Noto Sans Kannada', serif;
+  font-size: 0.85rem;
+  color: var(--gold-light);
+  text-align: center;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+/* Asta Bhairava ring */
+.asta-ring {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.asta-node {
+  background: linear-gradient(135deg, rgba(90,58,26,0.9), rgba(42,26,8,0.95));
+  border: 1.5px solid var(--gold);
+  border-radius: 6px;
+  padding: 12px 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.asta-node:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(200,134,10,0.4);
+  background: linear-gradient(135deg, rgba(200,134,10,0.2), rgba(90,58,26,0.9));
+}
+
+.asta-node.expanded {
+  border-color: var(--saffron);
+  background: linear-gradient(135deg, rgba(200,134,10,0.25), rgba(42,26,8,0.95));
+}
+
+.asta-name {
+  font-family: 'Noto Sans Kannada', serif;
+  font-size: 0.8rem;
+  color: var(--gold-light);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.asta-num {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 0.6rem;
+  color: var(--ash);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.sub-bhairavas {
+  display: none;
+  grid-column: 1 / -1;
+  background: rgba(13,6,3,0.8);
+  border: 1px solid rgba(200,134,10,0.2);
+  border-radius: 6px;
+  padding: 15px;
+  margin-top: 5px;
+  animation: fadeInUp 0.3s ease;
+}
+
+.sub-bhairavas.visible {
+  display: block;
+}
+
+.sub-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 8px;
+}
+
+.sub-node {
+  background: rgba(42,26,8,0.8);
+  border: 1px solid rgba(200,134,10,0.3);
+  border-radius: 4px;
+  padding: 8px 10px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.sub-node:hover {
+  border-color: var(--saffron);
+  background: rgba(200,134,10,0.15);
+}
+
+.sub-node-text {
+  font-family: 'Noto Sans Kannada', serif;
+  font-size: 0.75rem;
+  color: var(--cream-dim);
+  line-height: 1.4;
+}
+
+.connector-line {
+  text-align: center;
+  color: var(--gold);
+  font-size: 1.2rem;
+  margin: 5px 0;
+  opacity: 0.5;
+}
+
+/* ===================== CARD ===================== */
+.content-card {
+  background: linear-gradient(135deg, rgba(42,26,8,0.8), rgba(26,14,5,0.9));
+  border: 1px solid rgba(200,134,10,0.3);
+  border-radius: 6px;
+  padding: 25px;
+  margin-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.content-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+/* ===================== DIVIDER ===================== */
+.sacred-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 30px 0;
+}
+
+.sacred-divider::before, .sacred-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(200,134,10,0.4), transparent);
+}
+
+.sacred-divider-symbol {
+  color: var(--gold);
+  font-size: 1.2rem;
+  opacity: 0.7;
+}
+
+/* ===================== HOMEPAGE TILES ===================== */
+.home-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.home-tile {
+  background: linear-gradient(135deg, rgba(42,26,8,0.9), rgba(26,14,5,0.95));
+  border: 1px solid rgba(200,134,10,0.4);
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.home-tile:hover {
+  transform: translateY(-4px);
+  border-color: var(--gold-light);
+  box-shadow: 0 12px 30px rgba(200,134,10,0.25);
+}
+
+.home-tile-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.home-tile-body {
+  padding: 16px;
+}
+
+.home-tile-title {
+  font-family: 'Noto Sans Kannada', serif;
+  font-size: 1rem;
+  color: var(--gold-light);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.home-tile-sub {
+  font-size: 0.8rem;
+  color: var(--ash-light);
+  font-family: 'Cinzel Decorative', serif;
+  letter-spacing: 1px;
+}
+
+.home-tile-arrow {
+  position: absolute;
+  bottom: 14px;
+  right: 14px;
+  color: var(--gold);
+  font-size: 1.2rem;
+  opacity: 0.6;
+  transition: opacity 0.2s;
+}
+
+.home-tile:hover .home-tile-arrow { opacity: 1; }
+
+/* ===================== HERO BANNER ===================== */
+.hero-banner {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 40px;
+  border: 1px solid var(--gold);
+  box-shadow: 0 0 50px rgba(200,134,10,0.2);
+}
+
+.hero-banner img {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  display: block;
+}
+
+.hero-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(13,6,3,0.9) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 40px 30px;
+}
+
+.hero-banner-title {
+  font-family: 'Noto Sans Kannada', serif;
+  font-size: clamp(1.5rem, 4vw, 2.8rem);
+  font-weight: 700;
+  color: var(--gold-light);
+  text-align: center;
+  text-shadow: 0 2px 20px rgba(0,0,0,1);
+  line-height: 1.3;
+}
+
+.hero-banner-sub {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 0.9rem;
+  color: var(--ash-light);
+  letter-spacing: 3px;
+  margin-top: 8px;
+}
+
+/* ===================== INFO BOX ===================== */
+.info-box {
+  background: linear-gradient(135deg, rgba(90,58,26,0.3), rgba(42,26,8,0.8));
+  border-left: 3px solid var(--saffron);
+  border-radius: 0 4px 4px 0;
+  padding: 16px 20px;
+  margin: 20px 0;
+}
+
+.info-box-title {
+  font-family: 'Noto Sans Kannada', serif;
+  font-size: 0.9rem;
+  color: var(--saffron);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.info-box p {
+  font-family: 'Noto Sans Kannada', serif;
+  font-size: 0.88rem;
+  color: var(--text-dim);
+  line-height: 1.8;
+}
+
+/* ===================== TWO COL ===================== */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+@media (max-width: 700px) {
+  .two-col { grid-template-columns: 1fr; }
+}
+
+/* ===================== PHALA SHRUTI ===================== */
+.phala-box {
+  background: linear-gradient(135deg, rgba(139,0,0,0.15), rgba(42,26,8,0.9));
+  border: 1px solid var(--deep-red);
+  border-radius: 6px;
+  padding: 25px;
+  margin-top: 25px;
+}
+
+.phala-title {
+  font-family: 'Noto Sans Kannada', serif;
+  font-size: 1.1rem;
+  color: #FF6666;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* ===================== FOOTER ===================== */
+footer {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 30px 20px;
+  border-top: 1px solid rgba(200,134,10,0.2);
+  background: rgba(13,6,3,0.8);
+  margin-top: 50px;
+}
+
+.footer-text {
+  font-family: 'Noto Sans Kannada', serif;
+  font-size: 0.85rem;
+  color: var(--ash);
+}
+
+.footer-om {
+  font-size: 2rem;
+  color: var(--gold);
+  margin-bottom: 10px;
+  animation: glowPulse 3s infinite;
+}
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 600px) {
+  .text-scroll-pane { padding: 20px 15px; }
+  .content-card { padding: 18px 14px; }
+  .asta-ring { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ===================== SCROLL SNAP TEXT ===================== */
+.pre-text {
+  white-space: pre-wrap;
+  font-family: 'Noto Sans Kannada', serif;
+  font-size: 0.95rem;
+  line-height: 2;
+  color: var(--text-main);
+}
+
+.highlight-verse {
+  color: var(--gold-light);
+  font-weight: 600;
+}
+
+.verse-refrain {
+  color: var(--saffron);
+  font-style: italic;
+}
+
+/* Animated fire dots for decoration */
+@keyframes flicker {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.8); }
+}
+
+.fire-dot {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background: var(--saffron);
+  border-radius: 50%;
+  animation: flicker 1.5s ease-in-out infinite;
+}
+
+.fire-dot:nth-child(2) { animation-delay: 0.3s; }
+.fire-dot:nth-child(3) { animation-delay: 0.6s; }
+</style>
+</head>
+<body>
+
+<!-- Language Toggle -->
+<div class="lang-toggle">
+  <button class="lang-btn active" onclick="setLang('kn')" id="btn-kn">ಕನ್ನಡ</button>
+  <button class="lang-btn" onclick="setLang('en')" id="btn-en">English</button>
+</div>
+
+<!-- Header -->
+<header class="site-header">
+  <div class="header-flame-border"></div>
+  <div class="header-inner">
+    <span class="om-symbol">ॐ</span>
+    <h1 class="site-title-kn" id="header-title">ಶ್ರೀ ಕಾಲಭೈರವ</h1>
+    <p class="site-title-en" id="header-sub">Sri Kalabhairava Kshetram</p>
+    <div class="decorative-line">
+      <div class="fire-dot"></div>
+      <div class="fire-dot"></div>
+      <div class="fire-dot"></div>
+      <div class="decorative-dot"></div>
+      <div class="fire-dot"></div>
+      <div class="fire-dot"></div>
+      <div class="fire-dot"></div>
+    </div>
+  </div>
+</header>
+
+<!-- Navigation -->
+<nav>
+  <div class="nav-inner">
+    <button class="nav-btn active" onclick="showSection('home')" id="nav-home">🏠 <span class="t" data-kn="ಮುಖಪುಟ" data-en="Home">ಮುಖಪುಟ</span></button>
+    <button class="nav-btn" onclick="showSection('astakam')" id="nav-astakam">🔱 <span class="t" data-kn="ಕಾಲಭೈರವಾಷ್ಟಕಂ" data-en="Kalabhairava Ashtakam">ಕಾಲಭೈರವಾಷ್ಟಕಂ</span></button>
+    <button class="nav-btn" onclick="showSection('batuka-kavacham')" id="nav-batuka">🛡 <span class="t" data-kn="ಬಟುಕ ಕವಚಂ" data-en="Batuka Kavacham">ಬಟುಕ ಕವಚಂ</span></button>
+    <button class="nav-btn" onclick="showSection('mahakala-kavacham')" id="nav-mahakala">⚔ <span class="t" data-kn="ಮಹಾಕಾಲ ಕವಚಂ" data-en="Mahakala Kavacham">ಮಹಾಕಾಲ ಕವಚಂ</span></button>
+    <button class="nav-btn" onclick="showSection('ashtottara')" id="nav-ashtottara">📿 <span class="t" data-kn="ಅಷ್ಟೋತ್ತರ" data-en="Ashtottara">ಅಷ್ಟೋತ್ತರ</span></button>
+    <button class="nav-btn" onclick="showSection('bhairava-tree')" id="nav-tree">🌳 <span class="t" data-kn="ಭೈರವ ವಂಶ" data-en="Bhairava Tree">ಭೈರವ ವಂಶ</span></button>
+  </div>
+</nav>
+
+<main>
+
+<!-- ============ HOME ============ -->
+<section id="home" class="section active">
+  <div class="hero-banner">
+    <img src="bhairav1.png" alt="Kalabhairava" onerror="this.style.height='200px';this.style.background='linear-gradient(135deg,#3D2510,#1A0E05)'">
+    <div class="hero-banner-overlay">
+      <h2 class="hero-banner-title">
+        <span class="t" data-kn="ಶ್ರೀ ಕಾಲಭೈರವ ಕ್ಷೇತ್ರಮ್" data-en="Sri Kalabhairava Kshetram">ಶ್ರೀ ಕಾಲಭೈರವ ಕ್ಷೇತ್ರಮ್</span>
+      </h2>
+      <p class="hero-banner-sub">
+        <span class="t" data-kn="ಕಾಶಿಕಾಪುರಾಧಿನಾಥ" data-en="Lord of Kashi — Destroyer of Time">ಕಾಶಿಕಾಪುರಾಧಿನಾಥ</span>
+      </p>
+    </div>
+  </div>
+
+  <div class="info-box">
+    <p class="info-box-title"><span class="t" data-kn="ಭಗವಾನ್ ಕಾಲಭೈರವ" data-en="About Kalabhairava">ಭಗವಾನ್ ಕಾಲಭೈರವ</span></p>
+    <p class="t" data-kn="ಕಾಲಭೈರವನು ಶಿವನ ಉಗ್ರ ರೂಪ. ಅವನು ಕಾಲದ ಒಡೆಯ, ಕಾಶಿ ನಗರದ ರಕ್ಷಕ, ಮತ್ತು ಅಷ್ಟ ಭೈರವರ ಮೂಲ. ಕರಿ ಬಣ್ಣ, ತ್ರಿನೇತ್ರ, ಶ್ವಾನ ವಾಹನ — ಇವು ಅವನ ಲಕ್ಷಣಗಳು. ಭಕ್ತರ ಭಯ ಮತ್ತು ಅಡೆತಡೆಗಳನ್ನು ನಾಶ ಮಾಡಿ ಮುಕ್ತಿ ನೀಡುವ ದೇವ."
+         data-en="Kalabhairava is the fierce form of Shiva — lord of time, guardian of Kashi, and origin of the Ashta Bhairavas. With dark complexion, three eyes, and a dog as vehicle, he destroys fear and obstacles for devotees, granting liberation.">
+      ಕಾಲಭೈರವನು ಶಿವನ ಉಗ್ರ ರೂಪ. ಅವನು ಕಾಲದ ಒಡೆಯ, ಕಾಶಿ ನಗರದ ರಕ್ಷಕ, ಮತ್ತು ಅಷ್ಟ ಭೈರವರ ಮೂಲ.
+    </p>
+  </div>
+
+  <div class="home-grid">
+    <div class="home-tile" onclick="showSection('astakam')">
+      <img class="home-tile-img" src="bhairav2.png" alt="Astakam" onerror="this.style.height='80px'">
+      <div class="home-tile-body">
+        <div class="home-tile-title"><span class="t" data-kn="ಕಾಲಭೈರವಾಷ್ಟಕಂ" data-en="Kalabhairava Ashtakam">ಕಾಲಭೈರವಾಷ್ಟಕಂ</span></div>
+        <div class="home-tile-sub"><span class="t" data-kn="ಶ್ರೀ ಆದಿಶಂಕರ ವಿರಚಿತ" data-en="By Sri Adi Shankaracharya">ಶ್ರೀ ಆದಿಶಂಕರ ವಿರಚಿತ</span></div>
+      </div>
+      <span class="home-tile-arrow">→</span>
+    </div>
+
+    <div class="home-tile" onclick="showSection('batuka-kavacham')">
+      <img class="home-tile-img" src="bhairav3.png" alt="Batuka" onerror="this.style.height='80px'">
+      <div class="home-tile-body">
+        <div class="home-tile-title"><span class="t" data-kn="ಶ್ರೀ ಬಟುಕ ಭೈರವ ಕವಚಂ" data-en="Sri Batuka Bhairava Kavacham">ಶ್ರೀ ಬಟುಕ ಭೈರವ ಕವಚಂ</span></div>
+        <div class="home-tile-sub"><span class="t" data-kn="ದೇಹ ರಕ್ಷಾ ಕವಚ" data-en="Divine Protective Armour">ದೇಹ ರಕ್ಷಾ ಕವಚ</span></div>
+      </div>
+      <span class="home-tile-arrow">→</span>
+    </div>
+
+    <div class="home-tile" onclick="showSection('mahakala-kavacham')">
+      <img class="home-tile-img" src="bhairav4.png" alt="Mahakala" onerror="this.style.height='80px'">
+      <div class="home-tile-body">
+        <div class="home-tile-title"><span class="t" data-kn="ಶ್ರೀ ಮಹಾಕಾಲ ಭೈರವ ಕವಚಂ" data-en="Sri Mahakala Bhairava Kavacham">ಶ್ರೀ ಮಹಾಕಾಲ ಭೈರವ ಕವಚಂ</span></div>
+        <div class="home-tile-sub"><span class="t" data-kn="ರುದ್ರಯಾಮಲ ತಂತ್ರ" data-en="From Rudrayamala Tantra">ರುದ್ರಯಾಮಲ ತಂತ್ರ</span></div>
+      </div>
+      <span class="home-tile-arrow">→</span>
+    </div>
+
+    <div class="home-tile" onclick="showSection('ashtottara')">
+      <div style="background:linear-gradient(135deg,#3D2510,#1A0E05);height:180px;display:flex;align-items:center;justify-content:center;font-size:3rem;color:var(--gold);">📿</div>
+      <div class="home-tile-body">
+        <div class="home-tile-title"><span class="t" data-kn="ಅಷ್ಟೋತ್ತರ ಶತನಾಮಾವಳಿ" data-en="108 Names (Ashtottara)">ಅಷ್ಟೋತ್ತರ ಶತನಾಮಾವಳಿ</span></div>
+        <div class="home-tile-sub"><span class="t" data-kn="108 ದಿವ್ಯ ನಾಮಗಳು" data-en="108 Divine Names">108 ದಿವ್ಯ ನಾಮಗಳು</span></div>
+      </div>
+      <span class="home-tile-arrow">→</span>
+    </div>
+
+    <div class="home-tile" onclick="showSection('bhairava-tree')">
+      <div style="background:linear-gradient(135deg,#3D2510,#1A0E05);height:180px;display:flex;align-items:center;justify-content:center;font-size:3rem;color:var(--gold);">🌳</div>
+      <div class="home-tile-body">
+        <div class="home-tile-title"><span class="t" data-kn="ಅಷ್ಟ ಭೈರವ ವಂಶ ವೃಕ್ಷ" data-en="Ashta Bhairava Lineage Tree">ಅಷ್ಟ ಭೈರವ ವಂಶ ವೃಕ್ಷ</span></div>
+        <div class="home-tile-sub"><span class="t" data-kn="8 ಮುಖ್ಯ + 64 ಉಪ ಭೈರವರು" data-en="8 Main + 64 Sub Bhairavas">8 ಮುಖ್ಯ + 64 ಉಪ ಭೈರವರು</span></div>
+      </div>
+      <span class="home-tile-arrow">→</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ASTAKAM ============ -->
+<section id="astakam" class="section">
+  <div class="section-header">
+    <h2 class="section-title"><span class="t" data-kn="ಶ್ರೀ ಕಾಲಭೈರವಾಷ್ಟಕಂ" data-en="Sri Kalabhairava Ashtakam">ಶ್ರೀ ಕಾಲಭೈರವಾಷ್ಟಕಂ</span></h2>
+    <p class="section-subtitle"><span class="t" data-kn="ಶ್ರೀ ಆದಿಶಂಕರಾಚಾರ್ಯ ವಿರಚಿತ" data-en="Composed by Sri Adi Shankaracharya">By Sri Adi Shankaracharya</span></p>
+  </div>
+
+  <div class="astakam-layout">
+    <div class="astakam-image-wrap">
+      <img class="devotional-image" src="bhairav1.png" alt="Kalabhairava" onerror="this.style.background='#3D2510';this.style.height='400px'">
+      <p class="image-caption"><span class="t" data-kn="ಶ್ರೀ ಕಾಲಭೈರವ — ಕಾಶಿ ಪ್ರಭು" data-en="Sri Kalabhairava — Lord of Kashi">ಶ್ರೀ ಕಾಲಭೈರವ — ಕಾಶಿ ಪ್ರಭು</span></p>
+    </div>
+
+    <div class="text-scroll-pane">
+      <div class="stanza">
+        <p class="stanza-text">ದೇವರಾಜ-ಸೇವ್ಯಮಾನ-ಪಾವನಾಂಘ್ರಿ-ಪಂಕಜಂ<br>
+        ವ್ಯಾಳಯಜ್ಞ-ಸೂತ್ರಮಿಂದು-ಶೇಖರಂ ಕೃಪಾಕರಮ್ ।<br>
+        ನಾರದಾದಿ-ಯೋಗಿಬೃಂದ-ವಂದಿತಂ ದಿಗಂಬರಂ<br>
+        <span class="verse-refrain">ಕಾಶಿಕಾಪುರಾಧಿನಾಥ ಕಾಲಭೈರವಂ ಭಜೇ</span> <span class="stanza-number">॥ 1 ॥</span></p>
+      </div>
+      <div class="stanza">
+        <p class="stanza-text">ಭಾನುಕೋಟಿ-ಭಾಸ್ವರಂ ಭವಬ್ಧಿತಾರಕಂ ಪರಂ<br>
+        ನೀಲಕಂಠ-ಮೀಪ್ಸಿತಾರ್ಥ-ದಾಯಕಂ ತ್ರಿಲೋಚನಮ್ ।<br>
+        ಕಾಲಕಾಲ-ಮಂಬುಜಾಕ್ಷ-ಮಕ್ಷಶೂಲ-ಮಕ್ಷರಂ<br>
+        <span class="verse-refrain">ಕಾಶಿಕಾಪುರಾಧಿನಾಥ ಕಾಲಭೈರವಂ ಭಜೇ</span> <span class="stanza-number">॥ 2 ॥</span></p>
+      </div>
+      <div class="stanza">
+        <p class="stanza-text">ಶೂಲಟಂಕ-ಪಾಶದಂಡ-ಪಾಣಿಮಾದಿ-ಕಾರಣಂ<br>
+        ಶ್ಯಾಮಕಾಯ-ಮಾದಿದೇವ-ಮಕ್ಷರಂ ನಿರಾಮಯಮ್ ।<br>
+        ಭೀಮವಿಕ್ರಮಂ ಪ್ರಭುಂ ವಿಚಿತ್ರ ತಾಂಡವ ಪ್ರಿಯಂ<br>
+        <span class="verse-refrain">ಕಾಶಿಕಾಪುರಾಧಿನಾಥ ಕಾಲಭೈರವಂ ಭಜೇ</span> <span class="stanza-number">॥ 3 ॥</span></p>
+      </div>
+      <div class="stanza">
+        <p class="stanza-text">ಭುಕ್ತಿ-ಮುಕ್ತಿ-ದಾಯಕಂ ಪ್ರಶಸ್ತಚಾರು-ವಿಗ್ರಹಂ<br>
+        ಭಕ್ತವತ್ಸಲಂ ಸ್ಥಿರಂ ಸಮಸ್ತಲೋಕ-ವಿಗ್ರಹಮ್ ।<br>
+        ನಿಕ್ವಣನ್-ಮನೋಜ್ಞ-ಹೇಮ-ಕಿಂಕಿಣೀ-ಲಸತ್ಕಟಿಂ<br>
+        <span class="verse-refrain">ಕಾಶಿಕಾಪುರಾಧಿನಾಥ ಕಾಲಭೈರವಂ ಭಜೇ</span> <span class="stanza-number">॥ 4 ॥</span></p>
+      </div>
+      <div class="stanza">
+        <p class="stanza-text">ಧರ್ಮಸೇತು-ಪಾಲಕಂ ತ್ವಧರ್ಮಮಾರ್ಗ ನಾಶಕಂ<br>
+        ಕರ್ಮಪಾಶ-ಮೋಚಕಂ ಸುಶರ್ಮ-ದಾಯಕಂ ವಿಭುಮ್ ।<br>
+        ಸ್ವರ್ಣವರ್ಣ-ಕೇಶಪಾಶ-ಶೋಭಿತಾಂಗ-ಮಂಡಲಂ<br>
+        <span class="verse-refrain">ಕಾಶಿಕಾಪುರಾಧಿನಾಥ ಕಾಲಭೈರವಂ ಭಜೇ</span> <span class="stanza-number">॥ 5 ॥</span></p>
+      </div>
+      <div class="stanza">
+        <p class="stanza-text">ರತ್ನ-ಪಾದುಕಾ-ಪ್ರಭಾಭಿರಾಮ-ಪಾದಯುಗ್ಮಕಂ<br>
+        ನಿತ್ಯ-ಮದ್ವಿತೀಯ-ಮಿಷ್ಟ-ದೈವತಂ ನಿರಂಜನಮ್ ।<br>
+        ಮೃತ್ಯುದರ್ಪ-ನಾಶನಂ ಕರಾಳದಂಷ್ಟ್ರ-ಮೋಕ್ಷದಂ<br>
+        <span class="verse-refrain">ಕಾಶಿಕಾಪುರಾಧಿನಾಥ ಕಾಲಭೈರವಂ ಭಜೇ</span> <span class="stanza-number">॥ 6 ॥</span></p>
+      </div>
+      <div class="stanza">
+        <p class="stanza-text">ಅಟ್ಟಹಾಸ-ಭಿನ್ನ-ಪದ್ಮಜಾಂಡಕೋಶ-ಸಂತತಿಂ<br>
+        ದೃಷ್ಟಿಪಾತ-ನಷ್ಟಪಾಪ-ಜಾಲಮುಗ್ರ-ಶಾಸನಮ್ ।<br>
+        ಅಷ್ಟಸಿದ್ಧಿ-ದಾಯಕಂ ಕಪಾಲಮಾಲಿಕಾ-ಧರಂ<br>
+        <span class="verse-refrain">ಕಾಶಿಕಾಪುರಾಧಿನಾಥ ಕಾಲಭೈರವಂ ಭಜೇ</span> <span class="stanza-number">॥ 7 ॥</span></p>
+      </div>
+      <div class="stanza">
+        <p class="stanza-text">ಭೂತಸಂಘ-ನಾಯಕಂ ವಿಶಾಲಕೀರ್ತಿ-ದಾಯಕಂ<br>
+        ಕಾಶಿವಾಸಿ-ಲೋಕ-ಪುಣ್ಯಪಾಪ-ಶೋಧಕಂ ವಿಭುಮ್ ।<br>
+        ನೀತಿಮಾರ್ಗ-ಕೋವಿದಂ ಪುರಾತನಂ ಜಗತ್ಪತಿಂ<br>
+        <span class="verse-refrain">ಕಾಶಿಕಾಪುರಾಧಿನಾಥ ಕಾಲಭೈರವಂ ಭಜೇ</span> <span class="stanza-number">॥ 8 ॥</span></p>
+      </div>
+      <div class="stanza" style="background:rgba(200,134,10,0.07);padding:16px;border-radius:4px;border-top:1px solid rgba(200,134,10,0.3);">
+        <p style="font-family:'Noto Sans Kannada',serif;font-size:0.9rem;color:var(--gold-light);line-height:2;font-weight:600;">ಕಾಲಭೈರವಾಷ್ಟಕಂ ಪಠಂತಿ ಯೇ ಮನೋಹರಂ<br>
+        ಜ್ಞಾನಮುಕ್ತಿ-ಸಾಧನಂ ವಿಚಿತ್ರ-ಪುಣ್ಯ-ವರ್ಧನಮ್ ।<br>
+        ಶೋಕಮೋಹ-ಲೋಭದೈನ್ಯ-ಕೋಪತಾಪ-ನಾಶನಂ<br>
+        ತೇ ಪ್ರಯಾಂತಿ ಕಾಲಭೈರವಾಂಘ್ರಿ-ಸನ್ನಿಧಿಂ ಧ್ರುವಮ್ ॥</p>
+      </div>
+      <div style="margin-top:16px;text-align:center;font-size:0.8rem;color:var(--ash);font-style:italic;font-family:'Crimson Text',serif;">
+        ಇತಿ ಶ್ರೀಮತ್ಪರಮಹಂಸ ಶ್ರೀಮಚ್ಛಂಕರಭಗವತಃ ಕೃತೌ ಶ್ರೀ ಕಾಲಭೈರವಾಷ್ಟಕಂ ಸಂಪೂರ್ಣಮ್
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BATUKA KAVACHAM ============ -->
+<section id="batuka-kavacham" class="section">
+  <div class="section-header">
+    <h2 class="section-title"><span class="t" data-kn="ಶ್ರೀ ಬಟುಕ ಭೈರವ ಕವಚಂ" data-en="Sri Batuka Bhairava Kavacham">ಶ್ರೀ ಬಟುಕ ಭೈರವ ಕವಚಂ</span></h2>
+    <p class="section-subtitle"><span class="t" data-kn="ವಿಶ್ವಸಾರೋದ್ಧಾರ ತಂತ್ರ" data-en="From Vishvasaroddhara Tantra">Vishvasaroddhara Tantra</span></p>
+  </div>
+
+  <div class="kavacham-layout">
+    <div class="text-scroll-pane">
+      <div class="invocation-text">ಶ್ರೀಭೈರವ ಉವಾಚ ।</div>
+      <div class="stanza">
+        <p class="stanza-text">ದೇವೇಶಿ ದೇಹರಕ್ಷಾರ್ಥಂ ಕಾರಣಂ ಕಥ್ಯತಾಂ ಧ್ರುವಮ್ ।<br>
+        ಮ್ರಿಯಂತೇ ಸಾಧಕಾ ಯೇನ ವಿನಾ ಶ್ಮಶಾನಭೂಮಿಷು ॥<br>
+        ರಣೇಷು ಚಾತಿಘೋರೇಷು ಮಹಾವಾಯುಜಲೇಷು ಚ ।<br>
+        ಶೃಂಗಿಮಕರವಜ್ರೇಷು ಜ್ವರಾದಿವ್ಯಾಧಿವಹ್ನಿಷು ॥</p>
+      </div>
+
+      <div class="invocation-text" style="margin-top:16px;">ಶ್ರೀದೇವ್ಯುವಾಚ ।</div>
+      <div class="stanza">
+        <p class="stanza-text">ಕಥಯಾಮಿ ಶೃಣು ಪ್ರಾಜ್ಞ ಬಟೋಸ್ತು ಕವಚಂ ಶುಭಮ್ ।<br>
+        ಗೋಪನೀಯಂ ಪ್ರಯತ್ನೇನ ಮಾತೃಜಾರೋಪಮಂ ಯಥಾ ॥<br>
+        ತಸ್ಯ ಧ್ಯಾನಂ ತ್ರಿಧಾ ಪ್ರೋಕ್ತಂ ಸಾತ್ತ್ವಿಕಾದಿಪ್ರಭೇದತಃ ।</p>
+      </div>
+
+      <div style="margin:16px 0;padding:12px 16px;background:rgba(200,134,10,0.08);border-left:3px solid var(--gold);border-radius:0 4px 4px 0;">
+        <p style="font-family:'Noto Sans Kannada',serif;font-size:0.85rem;color:var(--gold);font-weight:600;">ಧ್ಯಾನಂ –</p>
+      </div>
+
+      <div class="stanza">
+        <p class="stanza-text">ವಂದೇ ಬಾಲಂ ಸ್ಫಟಿಕಸದೃಶಂ ಕುಂಡಲೋದ್ಭಾಸಿವಕ್ತ್ರಂ<br>
+        ದಿವ್ಯಾಕಲ್ಪೈರ್ನವಮಣಿಮಯೈಃ ಕಿಂಕಿಣೀನೂಪುರಾದ್ಯೈಃ ।<br>
+        ದೀಪ್ತಾಕಾರಂ ವಿಶದವದನಂ ಸುಪ್ರಸನ್ನಂ ತ್ರಿನೇತ್ರಂ<br>
+        ಹಸ್ತಾಬ್ಜಾಭ್ಯಾಂ ಬಟುಕಮನಿಶಂ ಶೂಲಖಡ್ಗೌದಧಾನಮ್ <span class="stanza-number">॥ 1 ॥</span></p>
+      </div>
+
+      <div class="stanza">
+        <p class="stanza-text">ಉದ್ಯದ್ಭಾಸ್ಕರಸನ್ನಿಭಂ ತ್ರಿನಯನಂ ರಕ್ತಾಂಗರಾಗಸ್ರಜಂ<br>
+        ಸ್ಮೇರಾಸ್ಯಂ ವರದಂ ಕಪಾಲಮಭಯಂ ಶೂಲಂ ದಧಾನಂ ಕರೈಃ ।<br>
+        ನೀಲಗ್ರೀವಮುದಾರಭೂಷಣಶತಂ ಶೀತಾಂಶುಚೂಡೋಜ್ಜ್ವಲಂ<br>
+        ಬಂಧೂಕಾರುಣವಾಸಸಂ ಭಯಹರಂ ದೇವಂ ಸದಾ ಭಾವಯೇ <span class="stanza-number">॥ 2 ॥</span></p>
+      </div>
+
+      <div style="margin:16px 0;padding:12px 16px;background:rgba(200,134,10,0.08);border-left:3px solid var(--saffron);border-radius:0 4px 4px 0;">
+        <p style="font-family:'Noto Sans Kannada',serif;font-size:0.85rem;color:var(--saffron);font-weight:600;">ಕವಚಂ –</p>
+      </div>
+
+      <div class="stanza">
+        <p class="stanza-text">ಓಂ ಶಿರೋ ಮೇ ಭೈರವಃ ಪಾತು ಲಲಾಟಂ ಭೀಷಣಸ್ತಥಾ ।<br>
+        ನೇತ್ರೇ ಚ ಭೂತಹನನಃ ಸಾರಮೇಯಾನುಗೋ ಭ್ರುವೌ <span class="stanza-number">॥ 1</span></p>
+      </div>
+      <div class="stanza">
+        <p class="stanza-text">ಭೂತನಾಥಶ್ಚ ಮೇ ಕರ್ಣೌ ಕಪೋಲೌ ಪ್ರೇತವಾಹನಃ ।<br>
+        ನಾಸಾಪುಟೌ ತಥೋಷ್ಠೌ ಚ ಭಸ್ಮಾಂಗಃ ಸರ್ವಭೂಷಣಃ <span class="stanza-number">॥ 2</span></p>
+      </div>
+      <div class="stanza">
+        <p class="stanza-text">ಭೀಷಣಾಸ್ಯೋ ಮಮಾಸ್ಯಂ ಚ ಶಕ್ತಿಹಸ್ತೋ ಗಲಂ ಮಮ ।<br>
+        ಸ್ಕಂಧೌ ದೈತ್ಯರಿಪುಃ ಪಾತು ಬಾಹೂ ಅತುಲವಿಕ್ರಮಃ <span class="stanza-number">॥ 3</span></p>
+      </div>
+      <div class="stanza">
+        <p class="stanza-text">ಪಾಣೀ ಕಪಾಲೀ ಮೇ ಪಾತು ಮುಂಡಮಾಲಾಧರೋ ಹೃದಮ್ ।<br>
+        ವಕ್ಷಃಸ್ಥಲಂ ತಥಾ ಶಾಂತಃ ಕಾಮಚಾರೀ ಸ್ತನಂ ಮಮ <span class="stanza-number">॥ 4</span></p>
+      </div>
+      <div class="stanza">
+        <p class="stanza-text">ಉದರಂ ಚ ಸ ಮೇ ತುಷ್ಟಃ ಕ್ಷೇತ್ರೇಶಃ ಪಾರ್ಶ್ವತಸ್ತಥಾ ।<br>
+        ಕ್ಷೇತ್ರಪಾಲಃ ಪೃಷ್ಠದೇಶಂ ಕ್ಷೇತ್ರಾಖ್ಯೋ ನಾಭಿತಸ್ತಥಾ <span class="stanza-number">॥ 5</span></p>
+      </div>
+      <div class="stanza">
+        <p class="stanza-text">ಕಟಿಂ ಪಾಪೌಘನಾಶಶ್ಚ ಬಟುಕೋ ಲಿಂಗದೇಶಕಮ್ ।<br>
+        ಗುದಂ ರಕ್ಷಾಕರಃ ಪಾತು ಊರೂ ರಕ್ಷಾಕರಃ ಸದಾ <span class="stanza-number">॥ 6</span></p>
+      </div>
+      <div class="stanza">
+        <p class="stanza-text">ಜಾನೂ ಚ ಘುರ್ಘುರಾರಾವೋ ಜಂಘೇ ರಕ್ಷತು ರಕ್ತಪಃ ।<br>
+        ಗುಲ್ಫೌ ಚ ಪಾದುಕಾಸಿದ್ಧಃ ಪಾದಪೃಷ್ಠಂ ಸುರೇಶ್ವರಃ <span class="stanza-number">॥ 7</span></p>
+      </div>
+      <div class="stanza">
+        <p class="stanza-text">ಆಪಾದಮಸ್ತಕಂ ಚೈವ ಆಪದುದ್ಧಾರಣಸ್ತಥಾ ।<br>
+        ಸಹಸ್ರಾರೇ ಮಹಾಪದ್ಮೇ ಕರ್ಪೂರಧವಲೋ ಗುರುಃ <span class="stanza-number">॥ 8</span></p>
+      </div>
+      <div class="stanza">
+        <p class="stanza-text">ಪಾತು ಮಾಂ ವಟುಕೋ ದೇವೋ ಭೈರವಃ ಸರ್ವಕರ್ಮಸು ।<br>
+        ಪೂರ್ವ ಸ್ಯಾಮಸಿತಾಂಗೋ ಮೇ ದಿಶಿ ರಕ್ಷತು ಸರ್ವದಾ <span class="stanza-number">॥ 9</span></p>
+      </div>
+      <div class="stanza">
+        <p class="stanza-text">ಆಗ್ನೇಯ್ಯಾಂ ಚ ರುರುಃ ಪಾತು ದಕ್ಷಿಣೇ ಚಂಡಭೈರವಃ ।<br>
+        ನೈರೃತ್ಯಾಂ ಕ್ರೋಧನಃ ಪಾತು ಮಾಮುನ್ಮತ್ತಸ್ತು ಪಶ್ಚಿಮೇ <span class="stanza-number">॥ 10</span></p>
+      </div>
+      <div class="stanza">
+        <p class="stanza-text">ವಾಯವ್ಯಾಂ ಮೇ ಕಪಾಲೀ ಚ ನಿತ್ಯಂ ಪಾಯಾತ್ ಸುರೇಶ್ವರಃ ।<br>
+        ಭೀಷಣೋ ಭೈರವಃ ಪಾತೂತ್ತರಸ್ಯಾಂ ದಿಶಿ ಸರ್ವದಾ <span class="stanza-number">॥ 11</span></p>
+      </div>
+      <div class="stanza">
+        <p class="stanza-text">ಸಂಹಾರಭೈರವಃ ಪಾತು ದಿಶ್ಯೈಶಾನ್ಯಾಂ ಮಹೇಶ್ವರಃ ।<br>
+        ಊರ್ಧ್ವೇ ಪಾತು ವಿಧಾತಾ ವೈ ಪಾತಾಲೇ ನಂದಿಕೋ ವಿಭುಃ <span class="stanza-number">॥ 12</span></p>
+      </div>
+      <div class="stanza">
+        <p class="stanza-text">ಸದ್ಯೋಜಾತಸ್ತು ಮಾಂ ಪಾಯಾತ್ ಸರ್ವತೋ ದೇವಸೇವಿತಃ ।<br>
+        ವಾಮದೇವೋಽವತು ಪ್ರೀತೋ ರಣೇ ಘೋರೇ ತಥಾವತು <span class="stanza-number">॥ 13</span></p>
+      </div>
+      <div class="stanza">
+        <p class="stanza-text">ಜಲೇ ತತ್ಪುರುಷಃ ಪಾತು ಸ್ಥಲೇ ಪಾತು ಗುರುಃ ಸದಾ ।<br>
+        ಡಾಕಿನೀಪುತ್ರಕಃ ಪಾತು ದಾರಾಂಸ್ತು ಲಾಕಿನೀಸುತಃ <span class="stanza-number">॥ 14</span></p>
+      </div>
+      <div class="stanza">
+        <p class="stanza-text">ಪಾತು ಸಾಕಲಕೋ ಭ್ರಾತೄನ್ ಶ್ರಿಯಂ ಮೇ ಸತತಂ ಗಿರಃ ।<br>
+        ಲಾಕಿನೀಪುತ್ರಕಃ ಪಾತು ಪಶೂನಶ್ವಾನಜಾಂಸ್ತಥಾ <span class="stanza-number">॥ 15</span></p>
+      </div>
+      <div class="stanza">
+        <p class="stanza-text">ಮಹಾಕಾಲೋಽವತು ಚ್ಛತ್ರಂ ಸೈನ್ಯಂ ವೈ ಕಾಲಭೈರವಃ ।<br>
+        ರಾಜ್ಯಂ ರಾಜ್ಯಶ್ರಿಯಂ ಪಾಯಾತ್ ಭೈರವೋ ಭೀತಿಹಾರಕಃ <span class="stanza-number">॥ 16</span></p>
+      </div>
+      <div class="stanza">
+        <p class="stanza-text">ರಕ್ಷಾಹೀನಂತು ಯತ್ ಸ್ಥಾನಂ ವರ್ಜಿತಂ ಕವಚೇನ ಚ ।<br>
+        ತತ್ ಸರ್ವಂ ರಕ್ಷ ಮೇ ದೇವ ತ್ವಂ ಯತಃ ಸರ್ವರಕ್ಷಕಃ <span class="stanza-number">॥ 17</span></p>
+      </div>
+      <div class="stanza">
+        <p class="stanza-text">ಏತತ್ ಕವಚಮೀಶಾನ ತವ ಸ್ನೇಹಾತ್ ಪ್ರಕಾಶಿತಮ್ ।<br>
+        ನಾಖ್ಯೇಯಂ ನರಲೋಕೇಷು ಸಾರಭೂತಂ ಚ ಸುಶ್ರಿಯಮ್ <span class="stanza-number">॥ 18</span></p>
+      </div>
+      <div class="stanza">
+        <p class="stanza-text">ಯಸ್ಮೈ ಕಸ್ಮೈ ನ ದಾತವ್ಯಂ ಕವಚೇಶಂ ಸುದುರ್ಲಭಮ್ ।<br>
+        ನ ದೇಯಂ ಪರಶಿಷ್ಯೇಭ್ಯಃ ಕೃಪಣೇಭ್ಯಶ್ಚ ಶಂಕರ <span class="stanza-number">॥ 19</span></p>
+      </div>
+      <div class="stanza">
+        <p class="stanza-text">ಯೋ ದದಾತಿ ನಿಷಿದ್ಧೇಭ್ಯಃ ಸ ವೈ ಭ್ರಷ್ಟೋ ಭವೇದ್ಧ್ರುವಮ್ ।<br>
+        ಅನೇನ ಕವಚೇಶೇನ ರಕ್ಷಾಂ ಕೃತ್ವಾ ದ್ವಿಜೋತ್ತಮಃ <span class="stanza-number">॥ 20</span></p>
+      </div>
+      <div class="stanza">
+        <p class="stanza-text">ವಿಚರನ್ ಯತ್ರ ಕುತ್ರಾಪಿ ವಿಘ್ನೌಘೈಃ ಪ್ರಾಪ್ಯತೇ ನ ಸಃ ।<br>
+        ಮಂತ್ರೇಣ ಮ್ರಿಯತೇ ಯೋಗೀ ಕವಚಂ ಯನ್ನ ರಕ್ಷಿತಃ <span class="stanza-number">॥ 21</span></p>
+      </div>
+      <div class="stanza">
+        <p class="stanza-text">ತಸ್ಮಾತ್ ಸರ್ವಪ್ರಯತ್ನೇನ ದುರ್ಲಭಂ ಪಾಪಚೇತಸಾಮ್ ।<br>
+        ಭೂರ್ಜೇ ರಂಭಾತ್ವಚೇ ವಾಪಿ ಲಿಖಿತ್ವಾ ವಿಧಿವತ್ ಪ್ರಭೋ <span class="stanza-number">॥ 22</span></p>
+      </div>
+            <div class="stanza">
+        <p class="stanza-text">ಧಾರಯೇತ್ ಪಾಠಯೇದ್ವಾಪಿ ಸಂಪಠೇದ್ವಾಪಿ ನಿತ್ಯಶಃ ।<br>
+        ಸಂಪ್ರಾಪ್ನೋತಿ ಪ್ರಭಾವಂ ವೈ ಕವಚಸ್ಯಾಸ್ಯ ವರ್ಣಿತಮ್ <span class="stanza-number">॥ 23</span></p>
+      </div>
+      <div class="stanza">
+        <p class="stanza-text">ನಮೋ ಭೈರವದೇವಾಯ ಸಾರಭೂತಾಯ ವೈ ನಮಃ ।<br>
+        ನಮಸ್ತ್ರೈಲೋಕ್ಯನಾಥಾಯ ನಾಥನಾಥಾಯ ವೈ ನಮಃ <span class="stanza-number">॥ 24</span></p>
+      </div>
+      <div style="text-align:center;margin-top:16px;font-size:0.8rem;color:var(--ash);font-style:italic;">
+        ಇತಿ ವಿಶ್ವಸಾರೋದ್ಧಾರತಂತ್ರೇ ವಟುಕಭೈರವಕವಚಂ ಸಮಾಪ್ತಮ್ ॥
+      </div>
+    </div>
+
+    <div>
+      <img class="devotional-image" src="bhairav3.png" alt="Batuka Bhairava" onerror="this.style.background='#3D2510';this.style.height='400px'">
+      <p class="image-caption"><span class="t" data-kn="ಶ್ರೀ ಬಟುಕ ಭೈರವ — ಯುವ ರೂಪ" data-en="Sri Batuka Bhairava — Youthful Form">ಶ್ರೀ ಬಟುಕ ಭೈರವ</span></p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MAHAKALA KAVACHAM ============ -->
+<section id="mahakala-kavacham" class="section">
+  <div class="section-header">
+    <h2 class="section-title"><span class="t" data-kn="ಶ್ರೀ ಮಹಾ ಕಾಲಭೈರವ ಕವಚಂ" data-en="Sri Mahakala Bhairava Kavacham">ಶ್ರೀ ಮಹಾ ಕಾಲಭೈರವ ಕವಚಂ</span></h2>
+    <p class="section-subtitle"><span class="t" data-kn="ರುದ್ರಯಾಮಲ ಮಹಾತಂತ್ರ" data-en="From Rudrayamala Mahatantra">Rudrayamala Mahatantra</span></p>
+  </div>
+
+  <div class="astakam-layout">
+    <div class="astakam-image-wrap">
+      <img class="devotional-image" src="bhairav4.png" alt="Mahakala Bhairava" onerror="this.style.background='#3D2510';this.style.height='400px'">
+      <p class="image-caption"><span class="t" data-kn="ಶ್ರೀ ಮಹಾ ಕಾಲಭೈರವ" data-en="Sri Mahakala Bhairava">ಶ್ರೀ ಮಹಾ ಕಾಲಭೈರವ</span></p>
+    </div>
+
+    <div class="text-scroll-pane">
+
+      <div class="invocation-text">ಶ್ರೀದೇವ್ಯುವಾಚ ।</div>
+
+      <div class="stanza"><p class="stanza-text">
+        ದೇವದೇವ ಮಹಾಬಾಹೋ ಭಕ್ತಾನಾಂ ಸುಖವರ್ಧನ ।<br>
+        ಕೇನ ಸಿದ್ಧಿಂ ದದಾತ್ಯಾಶು ಕಾಲೀ ತ್ರೈಲೋಕ್ಯಮೋಹನ <span class="stanza-number">॥ 1॥</span>
+      </p></div>
+
+      <div class="stanza"><p class="stanza-text">
+        ತನ್ಮೇ ವದ ದಯಾಽಽಧಾರ ಸಾಧಕಾಭೀಷ್ಟಸಿದ್ಧಯೇ ।<br>
+        ಕೃಪಾಂ ಕುರು ಜಗನ್ನಾಥ ವದ ವೇದವಿದಾಂ ವರ <span class="stanza-number">॥ 2॥</span>
+      </p></div>
+
+      <div class="invocation-text" style="margin-top:16px;">ಶ್ರೀಭೈರವ ಉವಾಚ ।</div>
+
+      <div class="stanza"><p class="stanza-text">
+        ಗೋಪನೀಯಂ ಪ್ರಯತ್ನೇನ ತತ್ತ್ವಾತ್ ತತ್ತ್ವಂ ಪರಾತ್ಪರಮ್ ।<br>
+        ಏಷ ಸಿದ್ಧಿಕರಃ ಸಮ್ಯಕ್ ಕಿಮಥೋ ಕಥಯಾಮ್ಯಹಮ್ <span class="stanza-number">॥ 3॥</span>
+      </p></div>
+
+      <div class="stanza"><p class="stanza-text">
+        ಮಹಾಕಾಲಮಹಂ ವಂದೇ ಸರ್ವಸಿದ್ಧಿಪ್ರದಾಯಕಮ್ ।<br>
+        ದೇವದಾನವಗಂಧರ್ವಕಿನ್ನರಪರಿಸೇವಿತಮ್ <span class="stanza-number">॥ 4॥</span>
+      </p></div>
+
+      <div class="stanza"><p class="stanza-text">
+        ಕವಚಂ ತತ್ತ್ವದೇವಸ್ಯ ಪಠನಾದ್ ಘೋರದರ್ಶನೇ ।<br>
+        ಸತ್ಯಂ ಭವತಿ ಸಾನ್ನಿಧ್ಯಂ ಕವಚಸ್ತವನಾಂತರಾತ್ <span class="stanza-number">॥ 5॥</span>
+      </p></div>
+
+      <div class="stanza"><p class="stanza-text">
+        ಸಿದ್ಧಿಂ ದದಾತಿ ಸಾ ತುಷ್ಟಾ ಕೃತ್ವಾ ಕವಚಮುತ್ತಮಮ್ ।<br>
+        ಸಾಮ್ರಾಜ್ಯತ್ವಂ ಪ್ರಿಯಂ ದತ್ವಾ ಪುತ್ರವತ್ ಪರಿಪಾಲಯೇತ್ <span class="stanza-number">॥ 6॥</span>
+      </p></div>
+
+      <div class="stanza"><p class="stanza-text">
+        ಕವಚಸ್ಯ ಋಷಿರ್ದೇವೀ ಕಾಲಿಕಾ ದಕ್ಷಿಣಾ ತಥಾ ।<br>
+        ವಿರಾಟ್ಛಂದಃ ಸುವಿಜ್ಞೇಯಂ ಮಹಾಕಾಲಸ್ತು ದೇವತಾ ।<br>
+        ಕಾಲಿಕಾ ಸಾಧನೇ ಚೈವ ವಿನಿಯೋಗಃ ಪ್ರಕೀರ್ತ್ತಿತಃ <span class="stanza-number">॥ 7॥</span>
+      </p></div>
+
+      <div class="stanza"><p class="stanza-text">
+        ಓಂ ಶ್ಮಶಾನಸ್ಥೋ ಮಹಾರುದ್ರೋ ಮಹಾಕಾಲೋ ದಿಗಂಬರಃ ।<br>
+        ಕಪಾಲಕರ್ತೃಕಾ ವಾಮೇ ಶೂಲಂ ಖಟ್ವಾಂಗಂ ದಕ್ಷಿಣೇ <span class="stanza-number">॥ 8॥</span>
+      </p></div>
+
+      <div class="stanza"><p class="stanza-text">
+        ಭುಜಂಗಭೂಷಿತೇ ದೇವಿ ಭಸ್ಮಾಸ್ಥಿಮಣಿಮಂಡಿತಃ ।<br>
+        ಜ್ವಲತ್ಪಾವಕಮಧ್ಯಸ್ಥೋ ಭಸ್ಮಶಯ್ಯಾವ್ಯವಸ್ಥಿತಃ <span class="stanza-number">॥ 9॥</span>
+      </p></div>
+
+      <div class="stanza"><p class="stanza-text">
+        ವಿಪರೀತರತಾಂ ತತ್ರ ಕಾಲಿಕಾಂ ಹೃದಯೋಪರಿ ।<br>
+        ಪೇಯಂ ಖಾದ್ಯಂ ಚ ಚೋಷ್ಯಂ ಚ ತೌ ಕೃತ್ವಾ ತು ಪರಸ್ಪರಮ್ ।<br>
+        ಏವಂ ಭಕ್ತ್ಯಾ ಯಜೇದ್ ದೇವಂ ಸರ್ವಸಿದ್ಧಿಃ ಪ್ರಜಾಯತೇ <span class="stanza-number">॥ 10॥</span>
+      </p></div>
+
+      <div class="stanza"><p class="stanza-text">
+        ಪ್ರಣವಂ ಪೂರ್ವಮುಚ್ಚಾರ್ಯ ಮಹಾಕಾಲಾಯ ತತ್ಪದಮ್ ।<br>
+        ನಮಃ ಪಾತು ಮಹಾಮಂತ್ರಃ ಸರ್ವಶಾಸ್ತ್ರಾರ್ಥಪಾರಗಃ <span class="stanza-number">॥ 11॥</span>
+      </p></div>
+
+      <div class="stanza"><p class="stanza-text">
+        ಅಷ್ಟಕ್ಷರೋ ಮಹಾ ಮಂತ್ರಃ ಸರ್ವಾಶಾಪರಿಪೂರಕಃ ।<br>
+        ಸರ್ವಪಾಪಕ್ಷಯಂ ಯಾತಿ ಗ್ರಹಣೇ ಭಕ್ತವತ್ಸಲೇ <span class="stanza-number">॥ 12॥</span>
+      </p></div>
+
+      <div class="stanza"><p class="stanza-text">
+        ಕೂರ್ಚದ್ವಂದ್ವಂ ಮಹಾಕಾಲ ಪ್ರಸೀದೇತಿ ಪದದ್ವಯಮ್ ।<br>
+        ಲಜ್ಜಾಯುಗ್ಮಂ ವಹ್ನಿಜಾಯಾ ಸ ತು ರಾಜೇಶ್ವರೋ ಮಹಾನ್ <span class="stanza-number">॥ 13॥</span>
+      </p></div>
+
+      <div class="stanza"><p class="stanza-text">
+        ಮಂತ್ರಗ್ರಹಣಮಾತ್ರೇಣ ಭವೇತ ಸತ್ಯಂ ಮಹಾಕವಿಃ ।<br>
+        ಗದ್ಯಪದ್ಯಮಯೀ ವಾಣೀ ಗಂಗಾನಿರ್ಝರಿತಾ ತಥಾ <span class="stanza-number">॥ 14॥</span>
+      </p></div>
+
+      <div class="stanza"><p class="stanza-text">
+        ತಸ್ಯ ನಾಮ ತು ದೇವೇಶಿ ದೇವಾ ಗಾಯಂತಿ ಭಾವುಕಾಃ ।<br>
+        ಶಕ್ತಿಬೀಜದ್ವಯಂ ದತ್ವಾ ಕೂರ್ಚಂ ಸ್ಯಾತ್ ತದನಂತರಮ್ <span class="stanza-number">॥ 15॥</span>
+      </p></div>
+
+      <div class="stanza"><p class="stanza-text">
+        ಮಹಾಕಾಲಪದಂ ದತ್ವಾ ಮಾಯಾಬೀಜಯುಗಂ ತಥಾ ।<br>
+        ಕೂರ್ಚಮೇಕಂ ಸಮುದ್ಧೃತ್ಯ ಮಹಾಮಂತ್ರೋ ದಶಾಕ್ಷರಃ <span class="stanza-number">॥ 16॥</span>
+      </p></div>
+
+      <div class="stanza"><p class="stanza-text">
+        ರಾಜಸ್ಥಾನೇ ದುರ್ಗಮೇ ಚ ಪಾತು ಮಾಂ ಸರ್ವತೋ ಮುದಾ ।<br>
+        ವೇದಾದಿಬೀಜಮಾದಾಯ ಭಗಮಾನ್ ತದನಂತರಮ್ <span class="stanza-number">॥ 17॥</span>
+      </p></div>
+
+      <div class="stanza"><p class="stanza-text">
+        ಮಹಾಕಾಲಾಯ ಸಂಪ್ರೋಚ್ಯ ಕೂರ್ಚಂ ದತ್ವಾ ಚ ಠದ್ವಯಮ್ ।<br>
+        ಹ್ರೀಂಕಾರಪೂರ್ವಮುದ್ಧೃತ್ಯ ವೇದಾದಿಸ್ತದನಂತರಮ್ <span class="stanza-number">॥ 18॥</span>
+      </p></div>
+
+      <div class="stanza"><p class="stanza-text">
+        ಮಹಾಕಾಲಸ್ಯಾಂತಭಾಗೇ ಸ್ವಾಹಾಂತಮನುಮುತ್ತಮಮ್ ।<br>
+        ಧನಂ ಪುತ್ರಂ ಸದಾ ಪಾತು ಬಂಧುದಾರಾನಿಕೇತನಮ್ <span class="stanza-number">॥ 19॥</span>
+      </p></div>
+
+      <div class="stanza"><p class="stanza-text">
+        ಪಿಂಗಲಾಕ್ಷೋ ಮಂಜುಯುದ್ಧೇ ಯುದ್ಧೇ ನಿತ್ಯಂ ಜಯಪ್ರದಃ ।<br>
+        ಸಂಭಾವ್ಯಃ ಸರ್ವದುಷ್ಟಘ್ನಃ ಪಾತು ಸ್ವಸ್ಥಾನವಲ್ಲಭಃ <span class="stanza-number">॥ 20॥</span>
+      </p></div>
+
+      <div class="stanza"><p class="stanza-text">
+        ಇತಿ ತೇ ಕಥಿತಂ ತುಭ್ಯಂ ದೇವಾನಾಮಪಿ ದುರ್ಲಭಮ್ ।<br>
+        ಅನೇನ ಪಠನಾದ್ ದೇವಿ ವಿಘ್ನನಾಶೋ ಯಥಾ ಭವೇತ್ <span class="stanza-number">॥ 21॥</span>
+      </p></div>
+
+      <div class="stanza"><p class="stanza-text">
+        ಸಂಪೂಜಕಃ ಶುಚಿಸ್ನಾತಃ ಭಕ್ತಿಯುಕ್ತಃ ಸಮಾಹಿತಃ ।<br>
+        ಸರ್ವವ್ಯಾಧಿವಿನಿರ್ಮುಕ್ತಃ ವೈರಿಮಧ್ಯೇ ವಿಶೇಷತಃ <span class="stanza-number">॥ 22॥</span>
+      </p></div>
+
+      <div class="stanza"><p class="stanza-text">
+        ಕಾಲೀಪಾರ್ಶ್ವಸ್ಥಿತೋ ದೇವಃ ಸರ್ವದಾ ಪಾತು ಮೇ ಮುಖೇ <span class="stanza-number">॥ 23॥</span>
+      </p></div>
+
+      <div class="phala-box">
+        <p class="phala-title">॥ ಫಲ ಶ್ರುತಿ ॥</p>
+
+        <div class="stanza"><p class="stanza-text">
+          ಪಠನಾತ್ ಕಾಲಿಕಾದೇವೀ ಪಠೇತ್ ಕವಚಮುತ್ತಮಮ್ ।<br>
+          ಶ್ರುಣುಯಾದ್ ವಾ ಪ್ರಯತ್ನೇನ ಸದಾಽಽನಂದಮಯೋ ಭವೇತ್ <span class="stanza-number">॥ 1॥</span>
+        </p></div>
+
+        <div class="stanza"><p class="stanza-text">
+          ಶ್ರದ್ಧಯಾಽಶ್ರದ್ಧಯಾ ವಾಪಿ ಪಠನಾತ್ ಕವಚಸ್ಯ ಯತ್ ।<br>
+          ಸರ್ವಸಿದ್ಧಿಮವಾಪ್ನೋತಿ ಯದ್ಯನ್ಮನಸಿ ವರ್ತತೇ <span class="stanza-number">॥ 2॥</span>
+        </p></div>
+
+        <div class="stanza"><p class="stanza-text">
+          ಬಿಲ್ವಮೂಲೇ ಪಠೇದ್ ಯಸ್ತು ತ್ರಿಸಂಧ್ಯಂ ಪಠನಾದ್ ದೇವಿ ।<br>
+          ಭವೇನ್ನಿತ್ಯಂ ಮಹಾಕವಿಃ <span class="stanza-number">॥ 3॥</span>
+        </p></div>
+
+        <div class="stanza"><p class="stanza-text">
+          ದುರ್ಭಿಕ್ಷೇ ರಾಜಪೀಡಾಯಾಂ ಗ್ರಾಮೇ ವಾ ವೈರಿಮಧ್ಯಕೇ ।<br>
+          ಯತ್ರ ಯತ್ರ ಭಯಂ ಪ್ರಾಪ್ತಃ ಸರ್ವತ್ರ ಪ್ರಪಠೇನ್ನರಃ <span class="stanza-number">॥ 5॥</span>
+        </p></div>
+
+        <div class="stanza"><p class="stanza-text">
+          ಇದಂ ಕವಚಮಜ್ಞಾತ್ವಾ ಕಾಲಂ ಯೋ ಭಜತೇ ನರಃ ।<br>
+          ನೈವ ಸಿದ್ಧಿರ್ಭವೇತ್ ತಸ್ಯ ವಿಘ್ನಸ್ತಸ್ಯ ಪದೇ ಪದೇ ।<br>
+          ಆದೌ ವರ್ಮ ಪಠಿತ್ವಾ ತು ತಸ್ಯ ಸಿದ್ಧಿರ್ಭವಿಷ್ಯತಿ <span class="stanza-number">॥ 8॥</span>
+        </p></div>
+
+        <div style="text-align:center;margin-top:12px;font-size:0.8rem;color:var(--ash);font-style:italic;">
+          ॥ ಇತಿ ರುದ್ರಯಾಮಲೇ ಮಹಾತಂತ್ರೇ ಮಹಾಕಾಲಭೈರವಕವಚಂ ಸಂಪೂರ್ಣಂ॥
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- ============ ASHTOTTARA ============ -->
+<section id="ashtottara" class="section">
+  <div class="section-header">
+    <h2 class="section-title"><span class="t" data-kn="ಅಷ್ಟೋತ್ತರ ಶತನಾಮಾವಳಿ" data-en="Ashtottara Shatanaamavali">ಅಷ್ಟೋತ್ತರ ಶತನಾಮಾವಳಿ</span></h2>
+    <p class="section-subtitle">108 Sacred Names</p>
+  </div>
+
+  <!-- Tabs -->
+  <div style="display:flex;gap:10px;margin-bottom:25px;flex-wrap:wrap;">
+    <button onclick="showNames('batuka-names','kala-names',this)" style="padding:10px 20px;background:linear-gradient(135deg,var(--saffron),var(--gold));border:none;color:var(--burnt);border-radius:4px;cursor:pointer;font-family:'Noto Sans Kannada',serif;font-size:0.85rem;font-weight:700;" id="tab-batuka">
+      <span class="t" data-kn="ಬಟುಕ ಭೈರವ ನಾಮಾವಳಿ" data-en="Batuka Bhairava Names">ಬಟುಕ ಭೈರವ ನಾಮಾವಳಿ</span>
+    </button>
+    <button onclick="showNames('kala-names','batuka-names',this)" style="padding:10px 20px;background:rgba(42,26,8,0.8);border:1px solid var(--gold);color:var(--gold-light);border-radius:4px;cursor:pointer;font-family:'Noto Sans Kannada',serif;font-size:0.85rem;" id="tab-kala">
+      <span class="t" data-kn="ಕಾಲಭೈರವ ನಾಮಾವಳಿ" data-en="Kalabhairava Names">ಕಾಲಭೈರವ ನಾಮಾವಳಿ</span>
+    </button>
+  </div>
+
+  <div id="batuka-names">
+    <div class="names-grid" id="batuka-names-grid"></div>
+  </div>
+  <div id="kala-names" style="display:none;">
+    <div class="names-grid" id="kala-names-grid"></div>
+  </div>
+</section>
+
+<!-- ============ BHAIRAVA TREE ============ -->
+<section id="bhairava-tree" class="section">
+  <div class="section-header">
+    <h2 class="section-title"><span class="t" data-kn="ಅಷ್ಟ ಭೈರವ ವಂಶ ವೃಕ್ಷ" data-en="Ashta Bhairava Lineage Tree">ಅಷ್ಟ ಭೈರವ ವಂಶ ವೃಕ್ಷ</span></h2>
+    <p class="section-subtitle"><span class="t" data-kn="ಕಾಲಭೈರವ → ಅಷ್ಟ ಭೈರವ → ೬೪ ಉಪ ಭೈರವರು" data-en="Kalabhairava → 8 Bhairavas → 64 Sub-Bhairavas">Kalabhairava → 8 Bhairavas → 64 Sub-Bhairavas</span></p>
+  </div>
+
+  <div class="info-box" style="margin-bottom:20px;">
+    <p class="t" data-kn="ಕಾಲಭೈರವನಿಂದ ಅಷ್ಟ ಭೈರವರು ಉದ್ಭವಿಸಿದರು. ಪ್ರತಿ ಭೈರವನಿಗೆ 8 ಉಪ ಭೈರವರು — ಒಟ್ಟು 64 ಭೈರವರು. ಅಷ್ಟೊತ್ತರ ಯಾವ ಭೈರವನ ಮೇಲೆ ಕ್ಲಿಕ್ ಮಾಡಿ ಅವರ ಉಪ ಭೈರವರನ್ನು ನೋಡಿ." data-en="From Kalabhairava emerged 8 Ashta Bhairavas, each commanding 8 sub-Bhairavas — 64 in total. Click any Bhairava to expand their lineage.">
+      ಕಾಲಭೈರವನಿಂದ ಅಷ್ಟ ಭೈರವರು ಉದ್ಭವಿಸಿದರು. ಪ್ರತಿ ಭೈರವನಿಗೆ 8 ಉಪ ಭೈರವರು — ಒಟ್ಟು 64 ಭೈರವರು.
+    </p>
+  </div>
+
+  <div class="tree-container">
+    <!-- Central node -->
+    <div style="text-align:center;margin-bottom:20px;">
+      <div class="center-node" onclick="toggleAllSubs()">
+        <div class="center-node-text">ॐ<br><span class="t" data-kn="ಶ್ರೀ ಕಾಲಭೈರವ" data-en="Sri Kalabhairava">ಶ್ರೀ ಕಾಲಭೈರವ</span></div>
+      </div>
+      <div style="color:var(--gold);font-size:1.5rem;margin:8px 0;opacity:0.5;">↓</div>
+      <p style="font-size:0.8rem;color:var(--ash);font-family:'Cinzel Decorative',serif;letter-spacing:2px;" class="t" data-kn="ಅಷ್ಟ ಭೈರವರು" data-en="The Eight Bhairavas">ASHTA BHAIRAVAS</p>
+    </div>
+
+    <div id="bhairava-tree-grid" class="asta-ring"></div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="footer-om">ॐ</div>
+  <p class="footer-text"><span class="t" data-kn="ಜಯ ಕಾಲಭೈರವ | ಕಾಶಿ ವಿಶ್ವನಾಥ ಕ್ಷೇತ್ರಮ್" data-en="Jai Kalabhairava | Sri Kashi Vishwanath Kshetram">ಜಯ ಕಾಲಭೈರವ | ಕಾಶಿ ವಿಶ್ವನಾಥ ಕ್ಷೇತ್ರಮ್</span></p>
+</footer>
+
+<script>
+// ===================== DATA =====================
+
+const bhairavasData = [
+  {
+    id: 1,
+    kn: "ಅಸಿತಾಂಗ ಭೈರವ",
+    en: "Asitanga Bhairava",
+    direction: { kn: "ಪೂರ್ವ", en: "East" },
+    color: "#4A0E0E",
+    subs: [
+      { kn: "ರಕ್ತ ಭೈರವ", en: "Rakta Bhairava" },
+      { kn: "ಚಂಡ ಭೈರವ", en: "Chanda Bhairava" },
+      { kn: "ಭ್ರಮರ ಭೈರವ", en: "Bhramara Bhairava" },
+      { kn: "ವ್ಯಾಘ್ರ ಭೈರವ", en: "Vyaghra Bhairava" },
+      { kn: "ವಿಕಟ ಭೈರವ", en: "Vikata Bhairava" },
+      { kn: "ವಿಶ್ವ ಭೈರವ", en: "Vishva Bhairava" },
+      { kn: "ಸ್ವಚ್ಛಂದ ಭೈರವ", en: "Svachhanda Bhairava" },
+      { kn: "ಶ್ರೀಕಂಠ ಭೈರವ", en: "Srikantha Bhairava" }
+    ]
+  },
+  {
+    id: 2,
+    kn: "ರುರು ಭೈರವ",
+    en: "Ruru Bhairava",
+    direction: { kn: "ಅಗ್ನಿ", en: "SE" },
+    color: "#4A2A0E",
+    subs: [
+      { kn: "ಉಗ್ರ ಭೈರವ", en: "Ugra Bhairava" },
+      { kn: "ಭೀಮ ಭೈರವ", en: "Bhima Bhairava" },
+      { kn: "ಮಹಾ ಭೈರವ", en: "Maha Bhairava" },
+      { kn: "ಮಹೋದರ ಭೈರವ", en: "Mahodara Bhairava" },
+      { kn: "ಕ್ರೋಧ ಭೈರವ", en: "Krodha Bhairava" },
+      { kn: "ಮದ ಭೈರವ", en: "Mada Bhairava" },
+      { kn: "ದಂಡ ಭೈರವ", en: "Danda Bhairava" },
+      { kn: "ಪ್ರಮಥ ಭೈರವ", en: "Pramatha Bhairava" }
+    ]
+  },
+  {
+    id: 3,
+    kn: "ಚಂಡ ಭೈರವ",
+    en: "Chanda Bhairava",
+    direction: { kn: "ದಕ್ಷಿಣ", en: "South" },
+    color: "#2A1A4A",
+    subs: [
+      { kn: "ಅಗ್ನಿ ಭೈರವ", en: "Agni Bhairava" },
+      { kn: "ವಾಯು ಭೈರವ", en: "Vayu Bhairava" },
+      { kn: "ಆಕಾಶ ಭೈರವ", en: "Akasha Bhairava" },
+      { kn: "ಜಲ ಭೈರವ", en: "Jala Bhairava" },
+      { kn: "ಭೂ ಭೈರವ", en: "Bhu Bhairava" },
+      { kn: "ಸೋಮ ಭೈರವ", en: "Soma Bhairava" },
+      { kn: "ಸೂರ್ಯ ಭೈರವ", en: "Surya Bhairava" },
+      { kn: "ತಾರ ಭೈರವ", en: "Tara Bhairava" }
+    ]
+  },
+  {
+    id: 4,
+    kn: "ಕ್ರೋಧ ಭೈರವ",
+    en: "Krodha Bhairava",
+    direction: { kn: "ನೈರುತ್ಯ", en: "SW" },
+    color: "#1A3A1A",
+    subs: [
+      { kn: "ಶ್ಮಶಾನ ಭೈರವ", en: "Shmasana Bhairava" },
+      { kn: "ರೌದ್ರ ಭೈರವ", en: "Raudra Bhairava" },
+      { kn: "ದೇವ ಭೈರವ", en: "Deva Bhairava" },
+      { kn: "ಅಟ್ಟಹಾಸ ಭೈರವ", en: "Attahasa Bhairava" },
+      { kn: "ತ್ರಿಶೂಲ ಭೈರವ", en: "Trishula Bhairava" },
+      { kn: "ಖಡ್ಗ ಭೈರವ", en: "Khadga Bhairava" },
+      { kn: "ಡಮರು ಭೈರವ", en: "Damaru Bhairava" },
+      { kn: "ಕಪಾಲ ಭೈರವ", en: "Kapala Bhairava" }
+    ]
+  },
+  {
+    id: 5,
+    kn: "ಉನ್ಮತ್ತ ಭೈರವ",
+    en: "Unmatta Bhairava",
+    direction: { kn: "ಪಶ್ಚಿಮ", en: "West" },
+    color: "#2A2A1A",
+    subs: [
+      { kn: "ನಟ ಭೈರವ", en: "Nata Bhairava" },
+      { kn: "ಪ್ರಮಥ ಭೈರವ", en: "Pramatha Bhairava" },
+      { kn: "ಭೀಕರ ಭೈರವ", en: "Bhikara Bhairava" },
+      { kn: "ಶಕ್ತಿ ಭೈರವ", en: "Shakti Bhairava" },
+      { kn: "ಕ್ಷೇತ್ರ ಭೈರವ", en: "Kshetra Bhairava" },
+      { kn: "ಪಿತೃ ಭೈರವ", en: "Pitru Bhairava" },
+      { kn: "ಭೂತ ಭೈರವ", en: "Bhoota Bhairava" },
+      { kn: "ವೀರ ಭೈರವ", en: "Veera Bhairava" }
+    ]
+  },
+  {
+    id: 6,
+    kn: "ಕಪಾಲ ಭೈರವ",
+    en: "Kapala Bhairava",
+    direction: { kn: "ವಾಯವ್ಯ", en: "NW" },
+    color: "#3A1A3A",
+    subs: [
+      { kn: "ಯಮ ಭೈರವ", en: "Yama Bhairava" },
+      { kn: "ಮೃತ್ಯು ಭೈರವ", en: "Mrityu Bhairava" },
+      { kn: "ಕಾಲ ಭೈರವ", en: "Kala Bhairava" },
+      { kn: "ಮಹಾಕಾಲ ಭೈರವ", en: "Mahakala Bhairava" },
+      { kn: "ನಾಗ ಭೈರವ", en: "Naga Bhairava" },
+      { kn: "ಅಹಿ ಭೈರವ", en: "Ahi Bhairava" },
+      { kn: "ಸರ್ಪ ಭೈರವ", en: "Sarpa Bhairava" },
+      { kn: "ವಾಸುಕಿ ಭೈರವ", en: "Vasuki Bhairava" }
+    ]
+  },
+  {
+    id: 7,
+    kn: "ಭೀಷಣ ಭೈರವ",
+    en: "Bhishana Bhairava",
+    direction: { kn: "ಉತ್ತರ", en: "North" },
+    color: "#1A2A3A",
+    subs: [
+      { kn: "ಅನಲ ಭೈರವ", en: "Anala Bhairava" },
+      { kn: "ಅನಿಲ ಭೈರವ", en: "Anila Bhairava" },
+      { kn: "ಪ್ರಬಲ ಭೈರವ", en: "Prabala Bhairava" },
+      { kn: "ಸ್ಥಾಣು ಭೈರವ", en: "Sthanu Bhairava" },
+      { kn: "ವಾಮ ಭೈರವ", en: "Vama Bhairava" },
+      { kn: "ದಕ್ಷ ಭೈರವ", en: "Daksha Bhairava" },
+      { kn: "ಸೌಮ್ಯ ಭೈರವ", en: "Saumya Bhairava" },
+      { kn: "ಈಶಾನ ಭೈರವ", en: "Ishana Bhairava" }
+    ]
+  },
+  {
+    id: 8,
+    kn: "ಸಂಹಾರ ಭೈರವ",
+    en: "Samhara Bhairava",
+    direction: { kn: "ಈಶಾನ್ಯ", en: "NE" },
+    color: "#3A0E0E",
+    subs: [
+      { kn: "ಕ್ಷೇಮ ಭೈರವ", en: "Kshema Bhairava" },
+      { kn: "ವ್ಯೋಮ ಭೈರವ", en: "Vyoma Bhairava" },
+      { kn: "ಪಾಶ ಭೈರವ", en: "Pasha Bhairava" },
+      { kn: "ಅಂಕುಶ ಭೈರವ", en: "Ankusha Bhairava" },
+      { kn: "ಮೋಕ್ಷ ಭೈರವ", en: "Moksha Bhairava" },
+      { kn: "ಸಿದ್ಧ ಭೈರವ", en: "Siddha Bhairava" },
+      { kn: "ಭಕ್ತ ಭೈರವ", en: "Bhakta Bhairava" },
+      { kn: "ನಂದಿ ಭೈರವ", en: "Nandi Bhairava" }
+    ]
+  }
+];
+
+const batukaNames = [
+  "ಓಂ ಭೈರವಾಯ ನಮಃ","ಓಂ ಭೂತನಾಥಾಯ ನಮಃ","ಓಂ ಭೂತಾತ್ಮನೇ ನಮಃ","ಓಂ ಭೂತಭಾವನಾಯ ನಮಃ",
+  "ಓಂ ಕ್ಷೇತ್ರದಾಯ ನಮಃ","ಓಂ ಕ್ಷೇತ್ರಪಾಲಾಯ ನಮಃ","ಓಂ ಕ್ಷೇತ್ರಜ್ಞಾಯ ನಮಃ","ಓಂ ಕ್ಷತ್ರಿಯಾಯ ನಮಃ",
+  "ಓಂ ವಿರಾಜೇ ನಮಃ","ಓಂ ಶ್ಮಶಾನವಾಸಿನೇ ನಮಃ","ಓಂ ಮಾಂಸಾಶಿನೇ ನಮಃ","ಓಂ ಖರ್ಪರಾಶಿನೇ ನಮಃ",
+  "ಓಂ ಮಖಾಂತಕೃತೇ ನಮಃ","ಓಂ ರಕ್ತಪಾಯ ನಮಃ","ಓಂ ಪ್ರಾಣಪಾಯ ನಮಃ","ಓಂ ಸಿದ್ಧಾಯ ನಮಃ",
+  "ಓಂ ಸಿದ್ಧಿದಾಯ ನಮಃ","ಓಂ ಸಿದ್ಧಸೇವಿತಾಯ ನಮಃ","ಓಂ ಕರಾಲಾಯ ನಮಃ","ಓಂ ಕಾಲಶಮನಾಯ ನಮಃ",
+  "ಓಂ ಕಲಾಕಾಷ್ಠಾತನವೇ ನಮಃ","ಓಂ ಕವಯೇ ನಮಃ","ಓಂ ತ್ರಿನೇತ್ರಾಯ ನಮಃ","ಓಂ ಬಹುನೇತ್ರಾಯ ನಮಃ",
+  "ಓಂ ಪಿಂಗಲಲೋಚನಾಯ ನಮಃ","ಓಂ ಶೂಲಪಾಣಯೇ ನಮಃ","ಓಂ ಖಡ್ಗಪಾಣಯೇ ನಮಃ","ಓಂ ಕಂಕಾಲಿನೇ ನಮಃ",
+  "ಓಂ ಧೂಮ್ರಲೋಚನಾಯ ನಮಃ","ಓಂ ಅಭೀರವೇ ನಮಃ","ಓಂ ಭೈರವಾಯ ನಮಃ","ಓಂ ಭೈರವೀಪತಯೇ ನಮಃ",
+  "ಓಂ ಭೂತಪಾಯ ನಮಃ","ಓಂ ಯೋಗಿನೀಪತಯೇ ನಮಃ","ಓಂ ಧನದಾಯ ನಮಃ","ಓಂ ಧನಹಾರಿಣೇ ನಮಃ",
+  "ಓಂ ಧನಪಾಯ ನಮಃ","ಓಂ ಪ್ರತಿಭಾವವತೇ ನಮಃ","ಓಂ ನಾಗಹಾರಾಯ ನಮಃ","ಓಂ ನಾಗಕೇಶಾಯ ನಮಃ",
+  "ಓಂ ವ್ಯೋಮಕೇಶಾಯ ನಮಃ","ಓಂ ಕಪಾಲಭೃತೇ ನಮಃ","ಓಂ ಕಾಲಾಯ ನಮಃ","ಓಂ ಕಪಾಲಮಾಲಿನೇ ನಮಃ",
+  "ಓಂ ಕಮನೀಯಾಯ ನಮಃ","ಓಂ ಕಲಾನಿಧಯೇ ನಮಃ","ಓಂ ತ್ರಿಲೋಚನಾಯ ನಮಃ","ಓಂ ಜ್ವಲನ್ನೇತ್ರಾಯ ನಮಃ",
+  "ಓಂ ತ್ರಿಶಿಖಿನೇ ನಮಃ","ಓಂ ತ್ರಿಲೋಕಭೃತೇ ನಮಃ","ಓಂ ತ್ರಿವೃತ್ತನಯನಾಯ ನಮಃ","ಓಂ ಡಿಂಭಾಯ ನಮಃ",
+  "ಓಂ ಶಾಂತಾಯ ನಮಃ","ಓಂ ಶಾಂತಜನಪ್ರಿಯಾಯ ನಮಃ","ಓಂ ವಟುಕಾಯ ನಮಃ","ಓಂ ವಟುಕೇಶಾಯ ನಮಃ",
+  "ಓಂ ಖಟ್ವಾಂಗವರಧಾರಕಾಯ ನಮಃ","ಓಂ ಭೂತಾಧ್ಯಕ್ಷಾಯ ನಮಃ","ಓಂ ಪಶುಪತಯೇ ನಮಃ","ಓಂ ಭಿಕ್ಷುಕಾಯ ನಮಃ",
+  "ಓಂ ಪರಿಚಾರಕಾಯ ನಮಃ","ಓಂ ಧೂರ್ತಾಯ ನಮಃ","ಓಂ ದಿಗಂಬರಾಯ ನಮಃ","ಓಂ ಸೌರಿಣೇ ನಮಃ",
+  "ಓಂ ಹರಿಣೇ ನಮಃ","ಓಂ ಪಾಂಡುಲೋಚನಾಯ ನಮಃ","ಓಂ ಪ್ರಶಾಂತಾಯ ನಮಃ","ಓಂ ಶಾಂತಿದಾಯ ನಮಃ",
+  "ಓಂ ಶುದ್ಧಾಯ ನಮಃ","ಓಂ ಶಂಕರಪ್ರಿಯಬಾಂಧವಾಯ ನಮಃ","ಓಂ ಅಷ್ಟಮೂರ್ತಯೇ ನಮಃ","ಓಂ ನಿಧೀಶಾಯ ನಮಃ",
+  "ಓಂ ಜ್ಞಾನಚಕ್ಷುಷೇ ನಮಃ","ಓಂ ತಮೋಮಯಾಯ ನಮಃ","ಓಂ ಅಷ್ಟಾಧಾರಾಯ ನಮಃ","ಓಂ ಕಳಾಧಾರಾಯ ನಮಃ",
+  "ಓಂ ಸರ್ಪಯುಕ್ತಾಯ ನಮಃ","ಓಂ ಶಶೀಶಿಖಾಯ ನಮಃ","ಓಂ ಭೂಧರಾಯ ನಮಃ","ಓಂ ಭೂಧರಾಧೀಶಾಯ ನಮಃ",
+  "ಓಂ ಭೂಪತಯೇ ನಮಃ","ಓಂ ಭೂಧರಾತ್ಮಕಾಯ ನಮಃ","ಓಂ ಕಂಕಾಲಧಾರಿಣೇ ನಮಃ","ಓಂ ಮುಂಡಿನೇ ನಮಃ",
+  "ಓಂ ವ್ಯಾಲಯಜ್ಞೋಪವೀತವತೇ ನಮಃ","ಓಂ ಜೃಂಭಣಾಯ ನಮಃ","ಓಂ ಮೋಹನಾಯ ನಮಃ","ಓಂ ಸ್ತಂಭಿನೇ ನಮಃ",
+  "ಓಂ ಮಾರಣಾಯ ನಮಃ","ಓಂ ಕ್ಷೋಭಣಾಯ ನಮಃ","ಓಂ ಶುದ್ಧನೀಲಾಂಜನಪ್ರಖ್ಯದೇಹಾಯ ನಮಃ","ಓಂ ಮುಂಡವಿಭೂಷಿತಾಯ ನಮಃ",
+  "ಓಂ ಬಲಿಭುಜೇ ನಮಃ","ಓಂ ಬಲಿಭುತಾತ್ಮನೇ ನಮಃ","ಓಂ ಕಾಮಿನೇ ನಮಃ","ಓಂ ಕಾಮಪರಾಕ್ರಮಾಯ ನಮಃ",
+  "ಓಂ ಸರ್ವಾಪತ್ತಾರಕಾಯ ನಮಃ","ಓಂ ದುರ್ಗಾಯ ನಮಃ","ಓಂ ದುಷ್ಟಭೂತನಿಷೇವಿತಾಯ ನಮಃ","ಓಂ ಕಾಮಿನೇ ನಮಃ",
+  "ಓಂ ಕಲಾನಿಧಯೇ ನಮಃ","ಓಂ ಕಾಂತಾಯ ನಮಃ","ಓಂ ಕಾಮಿನೀವಶಕೃತೇ ನಮಃ","ಓಂ ವಶಿನೇ ನಮಃ",
+  "ಓಂ ಸರ್ವಸಿದ್ಧಿಪ್ರದಾಯ ನಮಃ","ಓಂ ವೈದ್ಯಾಯ ನಮಃ","ಓಂ ಪ್ರಭವಿಷ್ಣವೇ ನಮಃ","ಓಂ ಪ್ರಭಾವವತೇ ನಮಃ"
+];
+
+const kalaNames = [
+  "ಓಂ ಭೈರವಾಯ ನಮಃ","ಓಂ ಭೂತನಾಥಾಯ ನಮಃ","ಓಂ ಭೂತಾತ್ಮನೇ ನಮಃ","ಓಂ ಭೂತಭವನಾಯ ನಮಃ",
+  "ಓಂ ಕ್ಷೇತ್ರಜ್ಞಾಯ ನಮಃ","ಓಂ ಕ್ಷೇತ್ರಪಾಲಾಯ ನಮಃ","ಓಂ ಕ್ಷೇತ್ರದಾಯ ನಮಃ","ಓಂ ಕ್ಷತ್ರಿಯಾಯ ನಮಃ",
+  "ಓಂ ವಿರಾಜೇ ನಮಃ","ಓಂ ಶ್ಮಶಾನವಾಸಿನೇ ನಮಃ","ಓಂ ಮಾಂಸಾಶಿನೇ ನಮಃ","ಓಂ ಖರ್ಪರಾಶಿನೇ ನಮಃ",
+  "ಓಂ ಸ್ಮರಾನ್ತಕಾಯ ನಮಃ","ಓಂ ರಕ್ತಪಾಯ ನಮಃ","ಓಂ ಪಾನಪಾಯ ನಮಃ","ಓಂ ಸಿದ್ಧಾಯ ನಮಃ",
+  "ಓಂ ಸಿದ್ಧಿದಾಯ ನಮಃ","ಓಂ ಸಿದ್ಧಿಸೇವಿತಾಯ ನಮಃ","ಓಂ ಕಂಕಾಲಾಯ ನಮಃ","ಓಂ ಕಲಶಮಾನಾಯ ನಮಃ",
+  "ಓಂ ಕಲಾಕಾಷ್ಠತನವೇ ನಮಃ","ಓಂ ಕವಯೇ ನಮಃ","ಓಂ ತ್ರಿನೇತ್ರಾಯ ನಮಃ","ಓಂ ಬಹುನೇತ್ರಾಯ ನಮಃ",
+  "ಓಂ ಪಿಂಗಲಲೋಚನಾಯ ನಮಃ","ಓಂ ಶೂಲಪನಯೇ ನಮಃ","ಓಂ ಖಡ್ಗಪಾನಯೇ ನಮಃ","ಓಂ ಕಂಕಾಲಿನೇ ನಮಃ",
+  "ಓಂ ಧೂಮ್ರಲೋಚನಾಯ ನಮಃ","ಓಂ ಅಭಿರವೇ ನಮಃ","ಓಂ ಭೈರವಿನಾಥಾಯ ನಮಃ","ಓಂ ಭೂತಪಾಯ ನಮಃ",
+  "ಓಂ ಯೋಗಿನಿಪತಯೇ ನಮಃ","ಓಂ ಧನದಾಯ ನಮಃ","ಓಂ ಧನಹಾರಿಣೇ ನಮಃ","ಓಂ ಧನ್ವತೇ ನಮಃ",
+  "ಓಂ ಪ್ರತಿಭಾನವತೇ ನಮಃ","ಓಂ ನಾಗಹರಾಯ ನಮಃ","ಓಂ ನಾಗಕೇಶಾಯ ನಮಃ","ಓಂ ವ್ಯೋಮಕೇಶಾಯ ನಮಃ",
+  "ಓಂ ಕಪಾಲಭೃತೇ ನಮಃ","ಓಂ ಕಾಲಾಯ ನಮಃ","ಓಂ ಕಪಾಲಮಾಲಿನೇ ನಮಃ","ಓಂ ಕಮನೀಯಾಯ ನಮಃ",
+  "ಓಂ ಕಲಾನಿಧಯೇ ನಮಃ","ಓಂ ತ್ರಿಲೋಚನಾಯ ನಮಃ","ಓಂ ಜ್ವಲನ್ನೇತ್ರಾಯ ನಮಃ","ಓಂ ತ್ರಿಶಿಖಿನೇ ನಮಃ",
+  "ಓಂ ತ್ರಿಲೋಕಪಾಯ ನಮಃ","ಓಂ ತ್ರಿನೇತ್ರತನಯಾಯ ನಮಃ","ಓಂ ಡಿಮ್ಭಾಯ ನಮಃ","ಓಂ ಶಾಂತಾಯ ನಮಃ",
+  "ಓಂ ಶಾನ್ತಜನಪ್ರಿಯಾಯ ನಮಃ","ಓಂ ಬಟುಕಾಯ ನಮಃ","ಓಂ ಬಹುವೇಷಾಯ ನಮಃ","ಓಂ ಖಟ್ವಾಂಗವರಧಾರಕಾಯ ನಮಃ",
+  "ಓಂ ಭೂತಾಧ್ಯಕ್ಷಾಯ ನಮಃ","ಓಂ ಪಾಶುಪತಯೇ ನಮಃ","ಓಂ ಭಿಕ್ಷುಕಾಯ ನಮಃ","ಓಂ ಪರಿಚಾರಕಾಯ ನಮಃ",
+  "ಓಂ ಧೂರ್ತಾಯ ನಮಃ","ಓಂ ದಿಗಮ್ಬರಾಯ ನಮಃ","ಓಂ ಶೌರಿಣೇ ನಮಃ","ಓಂ ಹರಿನಾಯ ನಮಃ",
+  "ಓಂ ಪಾಂಡುಲೋಚನಾಯ ನಮಃ","ಓಂ ಪ್ರಶಾನ್ತಾಯ ನಮಃ","ಓಂ ಶಾಂತಿದಾಯ ನಮಃ","ಓಂ ಸಿದ್ಧಾಯ ನಮಃ",
+  "ಓಂ ಶಂಕರಪ್ರಿಯಬಾನ್ಧವಾಯ ನಮಃ","ಓಂ ಅಷ್ಟಮೂರ್ತಯೇ ನಮಃ","ಓಂ ನಿಧೀಶಾಯ ನಮಃ","ಓಂ ಜ್ಞಾನಚಕ್ಷುಷೇ ನಮಃ",
+  "ಓಂ ತಪೋಮಯಾಯ ನಮಃ","ಓಂ ಅಷ್ಟಧರಾಯ ನಮಃ","ಓಂ ಷಡಧರಾಯ ನಮಃ","ಓಂ ಸರ್ಪಯುಕ್ತಾಯ ನಮಃ",
+  "ಓಂ ಶಿಖಿಶಾಖ್ಯೇ ನಮಃ","ಓಂ ಭೂಧರಾಯ ನಮಃ","ಓಂ ಭೂಧರಾಧೀಶಾಯ ನಮಃ","ಓಂ ಭೂಪತಯೇ ನಮಃ",
+  "ಓಂ ಭೂಧರಾತ್ಮಜಾಯ ನಮಃ","ಓಂ ಕಂಕಾಲಧಾರಿಣೇ ನಮಃ","ಓಂ ಪೂರ್ವೇ ನಮಃ","ಓಂ ನಾಗಯಜ್ಞೋಪವೀತಕಾಯ ನಮಃ",
+  "ಓಂ ಜೃಮ್ಭಾನಾಯ ನಮಃ","ಓಂ ಮೋಹನಾಯ ನಮಃ","ಓಂ ಸ್ತಂಭಿನೇ ನಮಃ","ಓಂ ಮರಣಾಯ ನಮಃ",
+  "ಓಂ ಕ್ಷೋಭನಾಯ ನಮಃ","ಓಂ ಶುದ್ಧಾಯ ನಮಃ","ಓಂ ನೀಲಾಂಜನಪ್ರಖ್ಯಾಯ ನಮಃ","ಓಂ ದೈತ್ಯಘ್ನೇ ನಮಃ",
+  "ಓಂ ಮುಂಡಭೂಷಿತಾಯ ನಮಃ","ಓಂ ಬಲಿಭುಜೇ ನಮಃ","ಓಂ ಬಲಿಭುನ್ನತಾಯ ನಮಃ","ಓಂ ಬಲಾಯ ನಮಃ",
+  "ಓಂ ಬಲಪರಾಕ್ರಮಾಯ ನಮಃ","ಓಂ ಸರ್ವಪತ್ತರಣಾಯ ನಮಃ","ಓಂ ದುರ್ಗಾಯ ನಮಃ","ಓಂ ದುಷ್ಟಭೂತನಿಷೇವಿತಾಯ ನಮಃ",
+  "ಓಂ ಕಾಮಿನೇ ನಮಃ","ಓಂ ಕಲಾನಿಧಯೇ ನಮಃ","ಓಂ ಕಾಂತಾಯ ನಮಃ","ಓಂ ಕಾಮಿನಿವಶಕೃದ್ವಾಶಿನೇ ನಮಃ",
+  "ಓಂ ಸರ್ವಸಿದ್ಧಿಪ್ರದಾಯ ನಮಃ","ಓಂ ವೈದ್ಯಾಯ ನಮಃ","ಓಂ ಪ್ರಭವೇ ನಮಃ","ಓಂ ವಿಷ್ಣವೇ ನಮಃ"
+];
+
+// ===================== INIT =====================
+
+let currentLang = 'kn';
+
+function init() {
+  buildNamesGrid('batuka-names-grid', batukaNames);
+  buildNamesGrid('kala-names-grid', kalaNames);
+  buildBhairavasTree();
+  updateLangDisplay();
+}
+
+function buildNamesGrid(gridId, names) {
+  const grid = document.getElementById(gridId);
+  if (!grid) return;
+  grid.innerHTML = names.map((name, i) => `
+    <div class="name-item">
+      <span class="name-number">${String(i+1).padStart(3,'0')}</span>
+      <span class="name-text">${name}</span>
+    </div>
+  `).join('');
+}
+
+function buildBhairavasTree() {
+  const grid = document.getElementById('bhairava-tree-grid');
+  if (!grid) return;
+  
+  grid.innerHTML = bhairavasData.map((b, idx) => `
+    <div>
+      <div class="asta-node" onclick="toggleSub(${idx})" id="node-${idx}" style="border-top: 3px solid ${b.color};">
+        <span class="asta-num">${idx+1}</span>
+        <div class="asta-name" id="astname-${idx}">${currentLang === 'kn' ? b.kn : b.en}</div>
+        <div style="font-size:0.65rem;color:var(--ash);margin-top:4px;" id="astdir-${idx}">${currentLang === 'kn' ? b.direction.kn : b.direction.en}</div>
+        <div style="font-size:0.7rem;color:var(--gold);margin-top:4px;opacity:0.6;">▼ 8 <span class="t" data-kn="ಉಪ" data-en="Sub">ಉಪ</span></div>
+      </div>
+    </div>
+  `).join('');
+
+  // Add sub-panels after grid
+  const subsWrap = document.createElement('div');
+  subsWrap.style.cssText = 'grid-column:1/-1;margin-top:10px;';
+  bhairavasData.forEach((b, idx) => {
+    const panel = document.createElement('div');
+    panel.id = `sub-${idx}`;
+    panel.className = 'sub-bhairavas';
+    panel.innerHTML = `
+      <p style="font-family:'Noto Sans Kannada',serif;font-size:0.85rem;color:var(--saffron);margin-bottom:10px;font-weight:700;">
+        ${currentLang === 'kn' ? b.kn : b.en} — <span style="color:var(--ash-light);" class="t" data-kn="ಉಪ ಭೈರವರು" data-en="Sub Bhairavas">ಉಪ ಭೈರವರು</span>
+      </p>
+      <div class="sub-grid">
+        ${b.subs.map((s, si) => `
+          <div class="sub-node">
+            <div style="font-size:0.6rem;color:var(--gold);opacity:0.6;margin-bottom:2px;">${idx+1}.${si+1}</div>
+            <div class="sub-node-text" id="sub-${idx}-${si}">${currentLang === 'kn' ? s.kn : s.en}</div>
+          </div>
+        `).join('')}
+      </div>
+    `;
+    subsWrap.appendChild(panel);
+  });
+  grid.parentNode.appendChild(subsWrap);
+}
+
+function toggleSub(idx) {
+  const panel = document.getElementById(`sub-${idx}`);
+  const node = document.getElementById(`node-${idx}`);
+  if (!panel) return;
+  const isOpen = panel.classList.contains('visible');
+  // close all
+  document.querySelectorAll('.sub-bhairavas').forEach(p => p.classList.remove('visible'));
+  document.querySelectorAll('.asta-node').forEach(n => n.classList.remove('expanded'));
+  if (!isOpen) {
+    panel.classList.add('visible');
+    node.classList.add('expanded');
+    panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
+}
+
+function toggleAllSubs() {
+  const panels = document.querySelectorAll('.sub-bhairavas');
+  const anyOpen = [...panels].some(p => p.classList.contains('visible'));
+  panels.forEach(p => anyOpen ? p.classList.remove('visible') : p.classList.add('visible'));
+  document.querySelectorAll('.asta-node').forEach(n => anyOpen ? n.classList.remove('expanded') : n.classList.add('expanded'));
+}
+
+// ===================== NAV =====================
+
+function showSection(id) {
+  document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+  const section = document.getElementById(id);
+  if (section) section.classList.add('active');
+  const navBtn = document.getElementById('nav-' + id.replace('-kavacham','').replace('batuka','batuka').replace('mahakala','mahakala'));
+  if (navBtn) navBtn.classList.add('active');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ===================== LANGUAGE =====================
+
+function setLang(lang) {
+  currentLang = lang;
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('btn-' + lang).classList.add('active');
+  updateLangDisplay();
+}
+
+function updateLangDisplay() {
+  document.querySelectorAll('[data-kn]').forEach(el => {
+    el.textContent = currentLang === 'kn' ? el.dataset.kn : el.dataset.en;
+  });
+  document.getElementById('header-title').textContent = currentLang === 'kn' ? 'ಶ್ರೀ ಕಾಲಭೈರವ' : 'Sri Kalabhairava';
+  document.getElementById('header-sub').textContent = currentLang === 'kn' ? 'ಕಾಶಿಕಾಪುರಾಧಿನಾಥ ಕ್ಷೇತ್ರಮ್' : 'Sri Kalabhairava Kshetram';
+  
+  // Rebuild Bhairava tree with new language
+  const grid = document.getElementById('bhairava-tree-grid');
+  if (grid) {
+    // update asta names
+    bhairavasData.forEach((b, idx) => {
+      const nameEl = document.getElementById(`astname-${idx}`);
+      const dirEl = document.getElementById(`astdir-${idx}`);
+      if (nameEl) nameEl.textContent = currentLang === 'kn' ? b.kn : b.en;
+      if (dirEl) dirEl.textContent = currentLang === 'kn' ? b.direction.kn : b.direction.en;
+      // update sub names
+      b.subs.forEach((s, si) => {
+        const subEl = document.getElementById(`sub-${idx}-${si}`);
+        if (subEl) subEl.textContent = currentLang === 'kn' ? s.kn : s.en;
+      });
+    });
+  }
+}
+
+function showNames(showId, hideId, btn) {
+  document.getElementById(showId).style.display = 'block';
+  document.getElementById(hideId).style.display = 'none';
+  document.querySelectorAll('#ashtottara button').forEach(b => {
+    b.style.background = 'rgba(42,26,8,0.8)';
+    b.style.border = '1px solid var(--gold)';
+    b.style.color = 'var(--gold-light)';
+  });
+  btn.style.background = 'linear-gradient(135deg,var(--saffron),var(--gold))';
+  btn.style.color = 'var(--burnt)';
+  btn.style.border = 'none';
+}
+
+// ===================== START =====================
+document.addEventListener('DOMContentLoaded', init);
+</script>
+</body>
+</html>
